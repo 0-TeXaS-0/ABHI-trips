@@ -98,6 +98,12 @@ const config: Config = {
         "fade-in": "fadeIn 0.5s ease-in-out",
         "slide-up": "slideUp 0.5s ease-out",
         "bounce-slow": "bounce 2s infinite",
+        "move-slow": "moveSlow 20s ease infinite",
+        "move-slow-reverse": "moveSlowReverse 25s ease infinite",
+        "shift-horizontal": "shiftHorizontal 15s linear infinite",
+        "float": "float 8s ease-in-out infinite",
+        "wave": "wave 10s linear infinite",
+        "wave-slow": "wave 15s linear infinite",
       },
       keyframes: {
         fadeIn: {
@@ -105,13 +111,40 @@ const config: Config = {
           "100%": { opacity: "1" },
         },
         slideUp: {
-          "0%": { transform: "translateY(20px)", opacity: "0" },
+          "0%": { transform: "translateY(10px)", opacity: "0" },
           "100%": { transform: "translateY(0)", opacity: "1" },
+        },
+        moveSlow: {
+          "0%": { transform: "translate(0%, 0%)" },
+          "25%": { transform: "translate(5%, 5%)" },
+          "50%": { transform: "translate(0%, 10%)" },
+          "75%": { transform: "translate(-5%, 5%)" },
+          "100%": { transform: "translate(0%, 0%)" },
+        },
+        moveSlowReverse: {
+          "0%": { transform: "translate(0%, 0%)" },
+          "25%": { transform: "translate(-5%, 5%)" },
+          "50%": { transform: "translate(0%, 10%)" },
+          "75%": { transform: "translate(5%, 5%)" },
+          "100%": { transform: "translate(0%, 0%)" },
+        },
+        shiftHorizontal: {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(100%)" },
+        },
+        float: {
+          "0%": { transform: "translateY(0px)", opacity: "0.5" },
+          "50%": { transform: "translateY(-20px)", opacity: "1" },
+          "100%": { transform: "translateY(0px)", opacity: "0.5" },
+        },
+        wave: {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(100%)" },
         },
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [],
 }
 
 export default config

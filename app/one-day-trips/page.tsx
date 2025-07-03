@@ -2,6 +2,7 @@ import { Calendar, Users, Star, Phone, MessageCircle, Mountain, Clock } from "lu
 import { TripCard } from "@/components/trip-card"
 import { AnnouncementBar } from "@/components/announcement-bar"
 import Image from "next/image"
+import Link from "next/link"
 
 export default function OneDayTripsPage() {
   const oneDayTrips = [
@@ -211,18 +212,18 @@ export default function OneDayTripsPage() {
               Create memories that last a lifetime with our perfectly planned day trips. All trips depart on Fridays.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <a href="tel:+919740174089">
+              <Link href="/contact">
                 <button className="inline-flex items-center justify-center rounded-md text-lg font-bold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-white shadow-2xl hover:shadow-yellow-500/25 transform hover:scale-105 h-14 px-10">
-                  <Phone className="mr-3 h-6 w-6" />
-                  Call +91 97401 74089
-                </button>
-              </a>
-              <a href="https://wa.me/919740174089" target="_blank" rel="noopener noreferrer">
-                <button className="inline-flex items-center justify-center rounded-md text-lg font-bold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-2 border-white/30 text-white hover:bg-white hover:text-purple-600 backdrop-blur-sm bg-white/10 hover:shadow-2xl transform hover:scale-105 h-14 px-10">
                   <MessageCircle className="mr-3 h-6 w-6" />
-                  WhatsApp Us
+                  Contact Us
                 </button>
-              </a>
+              </Link>
+              <Link href="/contact">
+                <button className="inline-flex items-center justify-center rounded-md text-lg font-bold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-2 border-white/30 text-white hover:bg-white hover:text-purple-600 backdrop-blur-sm bg-white/10 hover:shadow-2xl transform hover:scale-105 h-14 px-10">
+                  <Calendar className="mr-3 h-6 w-6" />
+                  Book a Trip
+                </button>
+              </Link>
             </div>
           </div>
         </div>

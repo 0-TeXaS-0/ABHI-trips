@@ -12,7 +12,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Calendar } from "@/components/ui/calendar"
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
 import { CalendarIcon, CheckCircle } from "lucide-react"
-import { format } from "date-fns"
+import { format, isFriday } from "date-fns"
 
 interface BookingFormProps {
   tripTitle?: string
@@ -69,11 +69,6 @@ Please confirm the availability and provide payment details. Thank you!`
 
   const handleInputChange = (field: string, value: string) => {
     setFormData((prev) => ({ ...prev, [field]: value }))
-  }
-
-  // Filter to show only Fridays
-  const isFriday = (date: Date) => {
-    return date.getDay() === 5 // Friday is day 5
   }
 
   if (isSubmitted) {
@@ -233,11 +228,11 @@ Please confirm the availability and provide payment details. Thank you!`
             size="lg"
             className="w-full h-14 bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 text-white font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 text-lg"
           >
-            Book via WhatsApp
+            Book Your Trip
           </Button>
 
           <p className="text-sm text-gray-500 text-center">
-            You'll be redirected to WhatsApp with all your details pre-filled for easy booking.
+            Fill out the form to book your trip, and we'll contact you soon to confirm your booking.
           </p>
         </form>
       </CardContent>

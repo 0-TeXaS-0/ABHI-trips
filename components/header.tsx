@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet"
+import { Sheet, SheetContent, SheetTrigger, SheetClose, SheetTitle } from "@/components/ui/sheet"
 import { Menu, X, ChevronDown } from "lucide-react"
 
 export default function Header() {
@@ -72,16 +72,23 @@ export default function Header() {
               <div key={item.name} className="relative group">
                 {item.submenu ? (
                   <div className="relative">
-                    <button className="flex items-center gap-1 px-4 py-3 text-gray-200 hover:text-white font-medium transition-all duration-300 hover:bg-white/10 rounded-lg group">
+                    <button 
+                      className="flex items-center gap-1 px-4 py-3 text-gray-200 hover:text-white font-medium transition-all duration-300 hover:bg-white/10 rounded-lg group"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                      aria-label={`${item.name} menu`}
+                    >
                       {item.name}
-                      <ChevronDown className="h-4 w-4 group-hover:rotate-180 transition-transform duration-300" />
+                      <ChevronDown className="h-4 w-4 group-hover:rotate-180 transition-transform duration-300" aria-hidden="true" />
                     </button>
-                    <div className="absolute top-full left-0 mt-1 w-48 bg-white backdrop-blur-md rounded-lg shadow-xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                    <div className="absolute top-full left-0 mt-1 w-48 bg-white backdrop-blur-md rounded-lg shadow-xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0" role="menu" aria-orientation="vertical" aria-labelledby={`${item.name}-menu-button`}>
                       {item.submenu.map((subItem) => (
                         <Link
                           key={subItem.name}
                           href={subItem.href}
                           className="block px-4 py-3 text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-colors first:rounded-t-lg last:rounded-b-lg"
+                          role="menuitem"
+                          tabIndex={0}
                         >
                           {subItem.name}
                         </Link>
@@ -108,11 +115,13 @@ export default function Header() {
                 variant="ghost"
                 size="sm"
                 className="lg:hidden p-2 text-gray-200 hover:text-white hover:bg-white/10"
+                aria-label="Open menu"
               >
                 <Menu className="h-6 w-6 md:h-7 md:w-7" />
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-80 bg-white border-gray-200">
+              <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
               <div className="flex items-center justify-between mb-6">
                 <div className="flex items-center space-x-3">
                   <Image src="/abhi-trip-logo.png" alt="Abhi Trip" width={35} height={35} className="rounded-full" />
@@ -122,13 +131,13 @@ export default function Header() {
                   </div>
                 </div>
                 <SheetClose asChild>
-                  <Button variant="ghost" size="sm" className="text-gray-400 hover:text-gray-600">
+                  <Button variant="ghost" size="sm" className="text-gray-400 hover:text-gray-600" aria-label="Close menu">
                     <X className="h-5 w-5" />
                   </Button>
                 </SheetClose>
               </div>
 
-              <nav className="flex flex-col space-y-1 mb-6">
+              <nav className="flex flex-col space-y-1 mb-6" aria-label="Mobile Navigation">
                 {navigation.map((item) => (
                   <div key={item.name}>
                     {item.submenu ? (

@@ -10,6 +10,71 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+  
+  /* Moving background animations */
+  .animate-move-slow {
+    animation: moveSlow 20s ease infinite;
+  }
+  
+  .animate-move-slow-reverse {
+    animation: moveSlowReverse 25s ease infinite;
+  }
+  
+  .animate-shift-horizontal {
+    animation: shiftHorizontal 15s linear infinite;
+  }
+  
+  .animate-float {
+    animation: float 8s ease-in-out infinite;
+  }
+  
+  .animate-wave {
+    animation: wave 10s linear infinite;
+  }
+  
+  .animate-wave-slow {
+    animation: wave 15s linear infinite;
+  }
+  
+  .animation-delay-1000 {
+    animation-delay: 1s;
+  }
+  
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+}
+
+@keyframes moveSlow {
+  0% { transform: translate(0%, 0%); }
+  25% { transform: translate(5%, 5%); }
+  50% { transform: translate(0%, 10%); }
+  75% { transform: translate(-5%, 5%); }
+  100% { transform: translate(0%, 0%); }
+}
+
+@keyframes moveSlowReverse {
+  0% { transform: translate(0%, 0%); }
+  25% { transform: translate(-5%, 5%); }
+  50% { transform: translate(0%, 10%); }
+  75% { transform: translate(5%, 5%); }
+  100% { transform: translate(0%, 0%); }
+}
+
+@keyframes shiftHorizontal {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); opacity: 0.5; }
+  50% { transform: translateY(-20px); opacity: 1; }
+  100% { transform: translateY(0px); opacity: 0.5; }
+}
+
+@keyframes wave {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
 }
 
 @layer base {
@@ -86,9 +151,10 @@ body {
 
 @layer base {
   * {
-    @apply border-border;
+    border-color: hsl(var(--border));
   }
   body {
-    @apply bg-background text-foreground;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
   }
 }

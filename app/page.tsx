@@ -22,6 +22,7 @@ import { FeaturedTripsCarousel } from "@/components/featured-trips-carousel"
 import { TestimonialsSection } from "@/components/testimonials-section"
 import { StatsSection } from "@/components/stats-section"
 import { AnnouncementBar } from "@/components/announcement-bar"
+import { EnhancedHeroSection } from "@/components/enhanced-hero-section"
 
 export default function HomePage() {
   const whyChooseUs = [
@@ -96,96 +97,24 @@ export default function HomePage() {
     <div className="min-h-screen">
       <AnnouncementBar />
 
-      {/* Hero Section */}
-      <section className="relative min-h-[80vh] md:min-h-[85vh] lg:min-h-[90vh] flex items-center justify-center overflow-hidden pt-20 md:pt-24">
-        {/* Background */}
-        <div className="absolute inset-0">
-          <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/e29bfc1554f74dec8bfd451e68cf69df.jpg-LsERpwl5FkGYF5qBPzuTvbMULrxorJ.jpeg"
-            alt="Group trekking adventure"
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-black/20"></div>
+      {/* Enhanced Hero Section */}
+      <EnhancedHeroSection />
+
+      {/* Stats Pills */}
+      <div className="flex flex-wrap justify-center items-center gap-3 md:gap-6 pt-4 md:pt-6 bg-gray-900 py-6">
+        <div className="flex items-center gap-3 bg-white/10 backdrop-blur-md rounded-full px-6 py-3 border border-white/20 text-white">
+          <Star className="h-5 w-5 text-yellow-400 fill-current" />
+          <span className="font-bold">4.8/5 Rating</span>
         </div>
-
-        {/* Floating Elements */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-20 left-10 w-32 h-32 bg-blue-500/20 rounded-full blur-xl animate-pulse"></div>
-          <div className="absolute top-40 right-20 w-24 h-24 bg-green-500/20 rounded-full blur-xl animate-pulse delay-1000"></div>
-          <div className="absolute bottom-40 left-20 w-40 h-40 bg-orange-500/20 rounded-full blur-xl animate-pulse delay-2000"></div>
+        <div className="flex items-center gap-3 bg-white/10 backdrop-blur-md rounded-full px-6 py-3 border border-white/20 text-white">
+          <Users className="h-5 w-5 text-blue-400" />
+          <span className="font-bold">500+ Happy Travelers</span>
         </div>
-
-        <div className="relative container mx-auto px-4 py-12 md:py-16 lg:py-20 text-center text-white z-10">
-          <div className="max-w-5xl mx-auto space-y-8">
-            {/* Main Heading */}
-            <div className="space-y-6">
-              <div className="flex items-center justify-center gap-2 mb-4">
-                <Award className="h-6 w-6 text-yellow-400" />
-                <span className="text-yellow-400 font-semibold tracking-wide uppercase text-sm">
-                  Premium Travel Experiences
-                </span>
-                <Award className="h-6 w-6 text-yellow-400" />
-              </div>
-
-              <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
-                <span className="block">Explore.</span>
-                <span className="block">Experience.</span>
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-green-400">
-                  Escape.
-                </span>
-              </h1>
-
-              <p className="text-lg md:text-xl lg:text-2xl text-gray-200 max-w-4xl mx-auto leading-relaxed">
-                Your trusted travel partner for weekend escapes and thrilling adventures across Karnataka and South
-                India.
-                <span className="block mt-2 text-blue-300 font-semibold">Create memories that last a lifetime.</span>
-              </p>
-            </div>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center">
-              <Link href="#featured-trips" className="inline-block">
-                <button className="inline-flex items-center justify-center rounded-full text-lg font-bold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 text-white shadow-xl hover:shadow-2xl transform hover:scale-105 h-14 px-10">
-                  <Calendar className="mr-3 h-6 w-6" />
-                  Explore Adventures
-                  <ArrowRight className="ml-3 h-6 w-6" />
-                </button>
-              </Link>
-              <Link href="/contact" className="inline-block">
-                <button className="inline-flex items-center justify-center rounded-full text-lg font-bold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-2 border-white/30 text-white hover:bg-white hover:text-blue-900 backdrop-blur-sm bg-white/10 hover:shadow-xl transform hover:scale-105 h-14 px-10">
-                  <Phone className="mr-3 h-6 w-6" />
-                  Book Now
-                </button>
-              </Link>
-            </div>
-
-            {/* Stats Pills */}
-            <div className="flex flex-wrap justify-center items-center gap-3 md:gap-6 pt-4 md:pt-6">
-              <div className="flex items-center gap-3 bg-white/10 backdrop-blur-md rounded-full px-6 py-3 border border-white/20">
-                <Star className="h-5 w-5 text-yellow-400 fill-current" />
-                <span className="font-bold">4.8/5 Rating</span>
-              </div>
-              <div className="flex items-center gap-3 bg-white/10 backdrop-blur-md rounded-full px-6 py-3 border border-white/20">
-                <Users className="h-5 w-5 text-blue-400" />
-                <span className="font-bold">500+ Happy Travelers</span>
-              </div>
-              <div className="flex items-center gap-3 bg-white/10 backdrop-blur-md rounded-full px-6 py-3 border border-white/20">
-                <CheckCircle className="h-5 w-5 text-green-400" />
-                <span className="font-bold">Premium Service</span>
-              </div>
-            </div>
-          </div>
+        <div className="flex items-center gap-3 bg-white/10 backdrop-blur-md rounded-full px-6 py-3 border border-white/20 text-white">
+          <CheckCircle className="h-5 w-5 text-green-400" />
+          <span className="font-bold">Premium Service</span>
         </div>
-
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-white/70 rounded-full mt-2 animate-pulse"></div>
-          </div>
-        </div>
-      </section>
+      </div>
 
       {/* Quick Categories */}
       <section className="py-16 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
