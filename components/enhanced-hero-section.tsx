@@ -215,7 +215,7 @@ export function EnhancedHeroSection() {
           height={400}
           className="w-full"
           priority
-          alt=""
+          alt="Mountain silhouette"
         />
       </motion.div>
 
@@ -668,7 +668,7 @@ export function EnhancedHeroSection() {
             >
               <Image
                 src="https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-                alt=""
+                alt="Adventure Trekking in Karnataka Mountains"
                 fill
                 className="object-cover object-center"
                 priority
