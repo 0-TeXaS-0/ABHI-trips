@@ -7,7 +7,7 @@ import { AnnouncementBar } from '@/components/announcement-bar';
 export default function OotyAdventurePage() {
   return (
     <div className="min-h-screen bg-gray-50">
-      <AnnouncementBar />
+      
 
       {/* Hero Section */}
       <div className="relative h-[60vh] md:h-[70vh] overflow-hidden">
@@ -670,3 +670,7 @@ export default function OotyAdventurePage() {
     </div>
   );
 }
+
+
+
+

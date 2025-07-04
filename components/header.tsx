@@ -4,8 +4,10 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { Sheet, SheetContent, SheetTrigger, SheetClose, SheetTitle } from "@/components/ui/sheet"
+import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet"
 import { Menu, X, ChevronDown } from "lucide-react"
+import { InstagramIcon } from "@/components/icons/instagram"
+import { WhatsAppIcon } from "@/components/icons/whatsapp"
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
@@ -39,46 +41,13 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 overflow-hidden ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? "bg-gradient-to-r from-blue-900/90 to-blue-800/90 backdrop-blur-md shadow-lg border-b border-blue-200/20"
-          : "bg-gradient-to-r from-blue-900/85 to-blue-800/85 backdrop-blur-sm"
+          ? "bg-gradient-to-r from-blue-900/95 to-green-900/95 backdrop-blur-md shadow-xl border-b border-blue-200/30"
+          : "bg-gradient-to-r from-blue-900/90 to-green-900/90 backdrop-blur-sm shadow-lg"
       }`}
     >
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {/* Single elegant wave animation */}
-        <div className="absolute inset-0 w-full h-full">
-          <div className="absolute bottom-0 left-0 w-full h-24 overflow-hidden">
-            <div className="absolute bottom-[-5%] left-[-5%] w-[110%] h-[200px] rotate-[-2deg] animate-wave-slow" 
-              style={{
-                background: 'linear-gradient(180deg, transparent 0%, rgba(59, 130, 246, 0.08) 50%, rgba(59, 130, 246, 0.15) 100%)',
-                borderRadius: '60% 70% 0 0'
-              }}
-            />
-            <div className="absolute bottom-[-8%] left-[-5%] w-[110%] h-[200px] rotate-[1deg] animate-wave-fast" 
-              style={{
-                background: 'linear-gradient(180deg, transparent 0%, rgba(14, 165, 233, 0.06) 50%, rgba(14, 165, 233, 0.12) 100%)',
-                borderRadius: '65% 75% 0 0',
-                animationDelay: '0.75s'
-              }}
-            />
-          </div>
-        </div>
-
-        {/* Subtle gradient overlay */}
-        <div className="absolute inset-0 opacity-30 mix-blend-soft-light bg-gradient-to-b from-blue-400/20 to-transparent"></div>
-        
-        {/* Minimal glow effects */}
-        <div className="absolute top-1/2 left-1/4 w-1 h-1 bg-blue-300/40 rounded-full animate-pulse"
-          style={{ animationDuration: '3s', animationDelay: '1s' }}
-        ></div>
-        <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-cyan-200/40 rounded-full animate-pulse"
-          style={{ animationDuration: '4s', animationDelay: '2s' }}
-        ></div>
-      </div>
-      
-      <div className="container mx-auto px-3 md:px-4 relative z-10">
+      <div className="container mx-auto px-3 md:px-4">
         <div className="flex items-center justify-between h-16 md:h-18">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2 group" onClick={closeMenu}>
@@ -90,7 +59,6 @@ export default function Header() {
                 height={40}
                 className="md:w-12 md:h-12 rounded-full group-hover:scale-105 transition-transform duration-300 shadow-md"
               />
-              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-transparent via-white/50 to-transparent animate-shimmer" style={{ backgroundSize: "200% 100%" }}></div>
             </div>
             <div className="block">
               <div className="text-lg md:text-xl font-bold text-white group-hover:text-blue-300 transition-colors">
@@ -101,47 +69,67 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-1">
-            {navigation.map((item) => (
-              <div key={item.name} className="relative group">
-                {item.submenu ? (
-                  <div className="relative">
-                    <button 
-                      className="flex items-center gap-1 px-4 py-3 text-gray-200 hover:text-white font-medium transition-all duration-300 hover:bg-white/10 rounded-lg group"
-                      aria-haspopup="true"
-                      aria-expanded="false"
-                      aria-label={`${item.name} menu`}
+          <div className="hidden lg:flex items-center space-x-1">
+            <nav className="flex items-center space-x-1 mr-4">
+              {navigation.map((item) => (
+                <div key={item.name} className="relative group">
+                  {item.submenu ? (
+                    <div className="relative">
+                      <button className="flex items-center gap-1 px-4 py-3 text-gray-200 hover:text-white font-medium transition-all duration-300 hover:bg-white/10 rounded-lg group">
+                        {item.name}
+                        <ChevronDown className="h-4 w-4 group-hover:rotate-180 transition-transform duration-300" />
+                      </button>
+                      <div className="absolute top-full left-0 mt-1 w-48 bg-white backdrop-blur-md rounded-lg shadow-xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                        {item.submenu.map((subItem) => (
+                          <Link
+                            key={subItem.name}
+                            href={subItem.href}
+                            className="block px-4 py-3 text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-colors first:rounded-t-lg last:rounded-b-lg"
+                          >
+                            {subItem.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  ) : (
+                    <Link
+                      href={item.href}
+                      className="px-4 py-3 text-gray-200 hover:text-white font-medium transition-all duration-300 hover:bg-white/10 rounded-lg relative group"
                     >
                       {item.name}
-                      <ChevronDown className="h-4 w-4 group-hover:rotate-180 transition-transform duration-300" aria-hidden="true" />
-                    </button>
-                    <div className="absolute top-full left-0 mt-1 w-48 bg-white backdrop-blur-md rounded-lg shadow-xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0" role="menu" aria-orientation="vertical" aria-labelledby={`${item.name}-menu-button`}>
-                      {item.submenu.map((subItem) => (
-                        <Link
-                          key={subItem.name}
-                          href={subItem.href}
-                          className="block px-4 py-3 text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-colors first:rounded-t-lg last:rounded-b-lg"
-                          role="menuitem"
-                          tabIndex={0}
-                        >
-                          {subItem.name}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                ) : (
-                  <Link
-                    href={item.href}
-                    className="px-4 py-3 text-gray-200 hover:text-white font-medium transition-all duration-300 hover:bg-white/10 rounded-lg relative group"
-                  >
-                    {item.name}
-                    <span className="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-6 group-hover:left-1/2 transform -translate-x-1/2"></span>
-                  </Link>
-                )}
-              </div>
-            ))}
-          </nav>
-
+                      <span className="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-6 group-hover:left-1/2 transform -translate-x-1/2"></span>
+                    </Link>
+                  )}
+                </div>
+              ))}
+            </nav>
+            
+            {/* Social Media Icons */}
+            <div className="flex items-center space-x-2">
+              <a
+                href="https://instagram.com/abhitrip"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative"
+              >
+                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-pink-500 via-red-500 to-yellow-500 opacity-0 group-hover:opacity-100 blur-sm transition-opacity duration-300"></div>
+                <div className="relative flex items-center justify-center w-8 h-8 bg-gradient-to-br from-pink-500 via-red-500 to-yellow-500 rounded-full overflow-hidden transition-transform duration-300 group-hover:scale-110 shadow-md">
+                  <InstagramIcon className="w-4 h-4 text-white" />
+                </div>
+              </a>
+              <a
+                href="https://wa.me/919876543210"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative"
+              >
+                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-green-500 to-green-600 opacity-0 group-hover:opacity-100 blur-sm transition-opacity duration-300"></div>
+                <div className="relative flex items-center justify-center w-8 h-8 bg-gradient-to-br from-green-500 to-green-600 rounded-full overflow-hidden transition-transform duration-300 group-hover:scale-110 shadow-md">
+                  <WhatsAppIcon className="w-4 h-4 text-white" />
+                </div>
+              </a>
+            </div>
+          </div>
           {/* Mobile Menu */}
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
@@ -149,13 +137,11 @@ export default function Header() {
                 variant="ghost"
                 size="sm"
                 className="lg:hidden p-2 text-gray-200 hover:text-white hover:bg-white/10"
-                aria-label="Open menu"
               >
                 <Menu className="h-6 w-6 md:h-7 md:w-7" />
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-80 bg-white border-gray-200">
-              <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
               <div className="flex items-center justify-between mb-6">
                 <div className="flex items-center space-x-3">
                   <Image src="/abhi-trip-logo.png" alt="Abhi Trip" width={35} height={35} className="rounded-full" />
@@ -165,13 +151,13 @@ export default function Header() {
                   </div>
                 </div>
                 <SheetClose asChild>
-                  <Button variant="ghost" size="sm" className="text-gray-400 hover:text-gray-600" aria-label="Close menu">
+                  <Button variant="ghost" size="sm" className="text-gray-400 hover:text-gray-600">
                     <X className="h-5 w-5" />
                   </Button>
                 </SheetClose>
               </div>
 
-              <nav className="flex flex-col space-y-1 mb-6" aria-label="Mobile Navigation">
+              <nav className="flex flex-col space-y-1 mb-6">
                 {navigation.map((item) => (
                   <div key={item.name}>
                     {item.submenu ? (
@@ -203,6 +189,30 @@ export default function Header() {
                   </div>
                 ))}
               </nav>
+              
+              {/* Mobile Social Icons */}
+              <div className="flex items-center justify-center space-x-4 mt-6 pt-4 border-t border-gray-100">
+                <a
+                  href="https://instagram.com/abhitrip"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group"
+                >
+                  <div className="flex items-center justify-center w-10 h-10 bg-gradient-to-br from-pink-500 via-red-500 to-yellow-500 rounded-full transition-transform duration-300 group-hover:scale-110 shadow-md">
+                    <InstagramIcon className="w-5 h-5 text-white" />
+                  </div>
+                </a>
+                <a
+                  href="https://wa.me/919876543210"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group"
+                >
+                  <div className="flex items-center justify-center w-10 h-10 bg-gradient-to-br from-green-500 to-green-600 rounded-full transition-transform duration-300 group-hover:scale-110 shadow-md">
+                    <WhatsAppIcon className="w-5 h-5 text-white" />
+                  </div>
+                </a>
+              </div>
             </SheetContent>
           </Sheet>
         </div>

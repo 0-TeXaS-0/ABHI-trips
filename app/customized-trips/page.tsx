@@ -1,6 +1,5 @@
 import { Calendar, Users, Star, Phone, MessageCircle, Sparkles, Settings, Compass } from "lucide-react"
 import Link from "next/link"
-import { AnnouncementBar } from "@/components/announcement-bar"
 import CustomTripCard from "@/components/custom-trip-card"
 
 const trips = [
@@ -57,7 +56,7 @@ const trips = [
 export default function CustomizedTripsPage() {
   return (
     <div className="min-h-screen bg-gray-50">
-      <AnnouncementBar />
+      
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white py-24 pt-32 overflow-hidden">
@@ -184,4 +183,6 @@ export default function CustomizedTripsPage() {
     </div>
   )
 }
+
+
 

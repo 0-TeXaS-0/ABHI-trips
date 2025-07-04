@@ -1,7 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Camera, MapPin, Calendar, Users, Phone, MessageCircle, Heart, Star } from "lucide-react"
-import { AnnouncementBar } from "@/components/announcement-bar"
 import Image from "next/image"
 
 export default function GalleryPage() {
@@ -157,7 +156,7 @@ export default function GalleryPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <AnnouncementBar />
+      
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-pink-900 via-purple-900 to-indigo-900 text-white py-24 pt-32 overflow-hidden">
@@ -380,3 +379,5 @@ export default function GalleryPage() {
     </div>
   )
 }
+
+

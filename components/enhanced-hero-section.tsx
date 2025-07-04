@@ -4,19 +4,15 @@ import { useState, useEffect, useRef, useCallback, useMemo } from "react"
 import { Star, ChevronRight, Mountain, MapPin, ArrowRight, Calendar } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
-import { motion, useScroll, useTransform, useAnimation, AnimatePresence, useReducedMotion } from "framer-motion"
+import { motion, useAnimation, AnimatePresence, useReducedMotion } from "framer-motion"
 
 export function EnhancedHeroSection() {
   const [isMounted, setIsMounted] = useState(false)
   const prefersReducedMotion = useReducedMotion()
   
   const containerRef = useRef<HTMLDivElement>(null)
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end start"]
-  })
-
-  const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0])
+  // Removed scrolling effect
+  const opacity = 1
   const mountainControls = useAnimation()
   const contentControls = useAnimation()
   const [animationComplete, setAnimationComplete] = useState(false)
@@ -209,7 +205,7 @@ export function EnhancedHeroSection() {
       {/* Enhanced Mountain Silhouettes - Parallax Effect */}
       <motion.div 
         className="absolute bottom-0 left-0 w-full opacity-30 pointer-events-none z-0"
-        style={{ y: useTransform(scrollYProgress, [0, 1], [0, 100]) }}
+        style={{ y: 0 }} /* Removed parallax effect */
         initial={{ opacity: 0, y: 50 }}
         animate={mountainControls}
       >

@@ -7,7 +7,6 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { Phone, Mail, MessageCircle, Clock, Send, Calendar, Users, Star } from "lucide-react"
-import { AnnouncementBar } from "@/components/announcement-bar"
 import Image from "next/image"
 
 export default function ContactPage() {
@@ -87,7 +86,7 @@ Looking forward to hearing from you!`
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <AnnouncementBar />
+      
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white py-24 pt-32 overflow-hidden">
@@ -416,3 +415,5 @@ Looking forward to hearing from you!`
     </div>
   )
 }
+
+

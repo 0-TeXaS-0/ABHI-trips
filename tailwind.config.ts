@@ -117,6 +117,11 @@ const config: Config = {
         "gradient": "gradient 8s ease infinite",
         "wave-fast": "wave 6s cubic-bezier(0.4, 0, 0.2, 1) infinite",
         "shimmer": "shimmer 3s ease-in-out infinite",
+        "glow": "glow 2s ease-in-out infinite alternate",
+        "pulse-subtle": "pulse-subtle 3s infinite",
+        "parallax-slow": "parallax 25s ease-in-out infinite",
+        "parallax-medium": "parallax 20s ease-in-out infinite reverse",
+        "parallax-fast": "parallax 15s ease-in-out infinite",
       },
       keyframes: {
         fadeIn: {
@@ -172,24 +177,61 @@ const config: Config = {
           "0%": { transform: "translateX(-100%)" },
           "100%": { transform: "translateX(100%)" },
         },
-        float: {
-          "0%": { transform: "translateY(0px)", opacity: "0.5" },
-          "50%": { transform: "translateY(-20px)", opacity: "1" },
-          "100%": { transform: "translateY(0px)", opacity: "0.5" },
-        },
-        wave: {
-          "0%": { transform: "translateX(-100%)" },
-          "100%": { transform: "translateX(100%)" },
-        },
         shimmer: {
           "0%": { backgroundPosition: "-200% 0", opacity: "0.7" },
           "50%": { backgroundPosition: "0% 0", opacity: "1" },
           "100%": { backgroundPosition: "200% 0", opacity: "0.7" },
         },
+        glow: {
+          '0%': { boxShadow: '0 0 4px rgba(100, 167, 237, 0.6)' },
+          '100%': { boxShadow: '0 0 8px rgba(100, 167, 237, 0.8)' },
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-5px)' },
+        },
+        wave: {
+          '0%': { transform: 'translateX(-50%) translateY(0) rotate(-2deg)' },
+          '50%': { transform: 'translateX(-50%) translateY(5px) rotate(0deg)' },
+          '100%': { transform: 'translateX(-50%) translateY(0) rotate(-2deg)' },
+        },
+        'pulse-subtle': {
+          '0%, 100%': { opacity: '0.7' },
+          '50%': { opacity: '0.5' },
+        },
+        parallax: {
+          "0%": { transform: "translateX(0%)" },
+          "50%": { transform: "translateX(-2%)" },
+          "100%": { transform: "translateX(0%)" },
+        },
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+    function ({
+      addUtilities,
+      theme,
+    }: {
+      addUtilities: (utilities: Record<string, any>) => void;
+      theme: (path: string) => Record<string, string>;
+    }) {
+      const textShadows = theme('textShadow');
+      const utilities: Record<string, any> = {};
+      
+      if (textShadows) {
+        Object.keys(textShadows).forEach(key => {
+          const value = textShadows[key];
+          const className = key === 'DEFAULT' ? '.text-shadow' : `.text-shadow-${key}`;
+          
+          utilities[className] = {
+            textShadow: value,
+          };
+        });
+      }
+      addUtilities(utilities);
+    },
+  ],
 }
 
 export default config

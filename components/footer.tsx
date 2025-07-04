@@ -2,6 +2,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Instagram, MessageCircle, MapPin, Phone, Mail } from "lucide-react"
+import "../styles/social-links.css"
 
 export default function Footer() {
   return (
@@ -56,31 +57,25 @@ export default function Footer() {
             <p className="text-gray-300 text-sm">
               Your trusted travel partner for weekend escapes and thrilling adventures across Karnataka and South India.
             </p>
-            <div className="flex space-x-4">
-              <Button
-                size="sm"
-                variant="outline"
-                className="border-gray-600 text-gray-300 hover:bg-gray-700 hover:text-white"
-                asChild
+            <div className="flex space-x-8 pt-2">
+              <a
+                href="https://www.instagram.com/abhitrip.in?igsh=MzRpdjR6Mzh4dDVo"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-icon-link social-icon-instagram group"
+                aria-label="Follow us on Instagram"
               >
-                <a
-                  href="https://www.instagram.com/abhitrip.in?igsh=MzRpdjR6Mzh4dDVo"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Instagram className="h-4 w-4" />
-                </a>
-              </Button>
-              <Button
-                size="sm"
-                variant="outline"
-                className="border-green-600 text-green-400 hover:bg-green-600 hover:text-white"
-                asChild
+                <Instagram className="h-5 w-5 text-white group-hover:animate-pulse" />
+              </a>
+              <a 
+                href="https://wa.me/919740174089" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="social-icon-link social-icon-whatsapp group"
+                aria-label="Contact us on WhatsApp"
               >
-                <a href="https://wa.me/919740174089" target="_blank" rel="noopener noreferrer">
-                  <MessageCircle className="h-4 w-4" />
-                </a>
-              </Button>
+                <MessageCircle className="h-5 w-5 text-white group-hover:animate-pulse" />
+              </a>
             </div>
           </div>
 

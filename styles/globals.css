@@ -10,6 +10,17 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+  
+  /* Custom mobile menu button visibility control */
+  .mobile-menu-button {
+    display: block; /* Default to visible on mobile */
+  }
+  
+  @media (min-width: 768px) {
+    .mobile-menu-button {
+      display: none; /* Hide on md screens and above */
+    }
+  }
 }
 
 @layer base {

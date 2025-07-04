@@ -1,6 +1,5 @@
 import { Calendar, Users, Star, Phone, MessageCircle, Mountain, Clock, Tent } from "lucide-react"
 import { TripCard } from "@/components/trip-card"
-import { AnnouncementBar } from "@/components/announcement-bar"
 import Link from "next/link"
 
 const twoDayTrips = [
@@ -170,7 +169,7 @@ const twoDayTrips = [
 export default function TwoDayTripsPage() {
   return (
     <div className="min-h-screen bg-gray-50">
-      <AnnouncementBar />
+      
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-900 via-indigo-900 to-violet-900 text-white py-24 pt-32 overflow-hidden">
@@ -275,16 +274,16 @@ export default function TwoDayTripsPage() {
               Create lasting memories with our perfectly planned weekend trips. All accommodations and activities included.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Link href="/contact">
+              <Link href="https://wa.me/919740174089" target="_blank" rel="noopener noreferrer">
                 <button className="inline-flex items-center justify-center rounded-md text-lg font-bold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white shadow-2xl hover:shadow-blue-500/25 transform hover:scale-105 h-14 px-10">
                   <MessageCircle className="mr-3 h-6 w-6" />
                   Contact Us
                 </button>
               </Link>
-              <Link href="/contact">
+              <Link href="https://wa.me/919740174089" target="_blank" rel="noopener noreferrer">
                 <button className="inline-flex items-center justify-center rounded-md text-lg font-bold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-2 border-white/30 text-white hover:bg-white hover:text-indigo-600 backdrop-blur-sm bg-white/10 hover:shadow-2xl transform hover:scale-105 h-14 px-10">
                   <Calendar className="mr-3 h-6 w-6" />
-                  Book a Trip
+                  WhatsApp Booking
                 </button>
               </Link>
             </div>
@@ -294,3 +293,6 @@ export default function TwoDayTripsPage() {
     </div>
   )
 }
+
+
+

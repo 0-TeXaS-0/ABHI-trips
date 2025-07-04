@@ -82,7 +82,7 @@ Please confirm the availability and provide payment details. Thank you!`
             <div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Redirecting to WhatsApp!</h3>
               <p className="text-gray-600">
-                Your booking request is being sent via WhatsApp with all the details pre-filled.
+                Your booking request is being sent via WhatsApp with all the details pre-filled. You'll be connected directly with our booking team for quick confirmation.
               </p>
             </div>
           </div>
@@ -93,11 +93,10 @@ Please confirm the availability and provide payment details. Thank you!`
 
   return (
     <Card className="border-0 shadow-lg bg-white max-w-2xl mx-auto">
-      <CardHeader className="text-center pb-6">
-        <CardTitle className="text-2xl font-bold text-gray-900">Book {tripTitle}</CardTitle>
-        <CardDescription className="text-lg">
-          Fill out the form below and we'll redirect you to WhatsApp with all details
-        </CardDescription>
+      <CardHeader className="text-center pb-6">            <CardTitle className="text-2xl font-bold text-gray-900">Book {tripTitle}</CardTitle>
+            <CardDescription className="text-lg">
+              Fill out the form below to book directly via WhatsApp
+            </CardDescription>
       </CardHeader>
       <CardContent className="p-8">
         <form onSubmit={handleSubmit} className="space-y-6">
@@ -228,11 +227,11 @@ Please confirm the availability and provide payment details. Thank you!`
             size="lg"
             className="w-full h-14 bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 text-white font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 text-lg"
           >
-            Book Your Trip
+            Book Now via WhatsApp
           </Button>
 
           <p className="text-sm text-gray-500 text-center">
-            Fill out the form to book your trip, and we'll contact you soon to confirm your booking.
+            Your booking details will be sent to us via WhatsApp for quick confirmation.
           </p>
         </form>
       </CardContent>

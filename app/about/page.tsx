@@ -15,7 +15,6 @@ import {
   Eye,
   Compass,
 } from "lucide-react"
-import { AnnouncementBar } from "@/components/announcement-bar"
 import Image from "next/image"
 
 export default function AboutPage() {
@@ -112,7 +111,7 @@ export default function AboutPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <AnnouncementBar />
+      
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white py-24 pt-32 overflow-hidden">
@@ -424,3 +423,5 @@ export default function AboutPage() {
     </div>
   )
 }
+
+
