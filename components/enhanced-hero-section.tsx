@@ -211,11 +211,11 @@ export function EnhancedHeroSection() {
       >
         <Image 
           src="https://firebasestorage.googleapis.com/v0/b/react-dnd-flow-chart.appspot.com/o/mountains-silhouette.png?alt=media"
-          alt=""
           width={2000}
           height={400}
           className="w-full"
           priority
+          alt=""
         />
       </motion.div>
 
@@ -668,7 +668,7 @@ export function EnhancedHeroSection() {
             >
               <Image
                 src="https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-                alt="Adventure Trekking in Karnataka Mountains"
+                alt=""
                 fill
                 className="object-cover object-center"
                 priority
