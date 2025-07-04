@@ -9,6 +9,14 @@ const config: Config = {
     "*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    screens: {
+      'xs': '480px',
+      'sm': '640px',
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1280px',
+      '2xl': '1536px',
+    },
     extend: {
       colors: {
         background: "hsl(var(--background))",
@@ -102,8 +110,13 @@ const config: Config = {
         "move-slow-reverse": "moveSlowReverse 25s ease infinite",
         "shift-horizontal": "shiftHorizontal 15s linear infinite",
         "float": "float 8s ease-in-out infinite",
-        "wave": "wave 10s linear infinite",
-        "wave-slow": "wave 15s linear infinite",
+        "wave": "wave 10s ease-in-out infinite",
+        "wave-slow": "wave 8s cubic-bezier(0.4, 0, 0.2, 1) infinite",
+        "floating": "floating 15s ease-in-out infinite",
+        "ping-slow": "ping-slow 4s ease-in-out infinite",
+        "gradient": "gradient 8s ease infinite",
+        "wave-fast": "wave 6s cubic-bezier(0.4, 0, 0.2, 1) infinite",
+        "shimmer": "shimmer 3s ease-in-out infinite",
       },
       keyframes: {
         fadeIn: {
@@ -116,16 +129,43 @@ const config: Config = {
         },
         moveSlow: {
           "0%": { transform: "translate(0%, 0%)" },
-          "25%": { transform: "translate(5%, 5%)" },
-          "50%": { transform: "translate(0%, 10%)" },
-          "75%": { transform: "translate(-5%, 5%)" },
+          "25%": { transform: "translate(8%, 8%)" },
+          "50%": { transform: "translate(0%, 15%)" },
+          "75%": { transform: "translate(-8%, 8%)" },
           "100%": { transform: "translate(0%, 0%)" },
+        },
+        floating: {
+          "0%": { transform: "translateY(0px) translateX(0px)" },
+          "25%": { transform: "translateY(-10px) translateX(5px)" },
+          "50%": { transform: "translateY(0px) translateX(10px)" },
+          "75%": { transform: "translateY(10px) translateX(5px)" },
+          "100%": { transform: "translateY(0px) translateX(0px)" },
+        },
+        "ping-slow": {
+          "0%": { transform: "scale(1)", opacity: "0.6" },
+          "50%": { transform: "scale(1.8)", opacity: "0.3" },
+          "100%": { transform: "scale(1)", opacity: "0.6" },
+        },
+        "wave-slow": {
+          "0%": { transform: "rotate(-2deg) translateY(0%)" },
+          "50%": { transform: "rotate(-2deg) translateY(-1%)" },
+          "100%": { transform: "rotate(-2deg) translateY(0%)" },
+        },
+        "wave-fast": {
+          "0%": { transform: "rotate(1deg) translateY(0%)" },
+          "50%": { transform: "rotate(1deg) translateY(-1.5%)" },
+          "100%": { transform: "rotate(1deg) translateY(0%)" },
+        },
+        gradient: {
+          "0%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
+          "100%": { backgroundPosition: "0% 50%" },
         },
         moveSlowReverse: {
           "0%": { transform: "translate(0%, 0%)" },
-          "25%": { transform: "translate(-5%, 5%)" },
-          "50%": { transform: "translate(0%, 10%)" },
-          "75%": { transform: "translate(5%, 5%)" },
+          "25%": { transform: "translate(-8%, 8%)" },
+          "50%": { transform: "translate(0%, 15%)" },
+          "75%": { transform: "translate(8%, 8%)" },
           "100%": { transform: "translate(0%, 0%)" },
         },
         shiftHorizontal: {
@@ -140,6 +180,11 @@ const config: Config = {
         wave: {
           "0%": { transform: "translateX(-100%)" },
           "100%": { transform: "translateX(100%)" },
+        },
+        shimmer: {
+          "0%": { backgroundPosition: "-200% 0", opacity: "0.7" },
+          "50%": { backgroundPosition: "0% 0", opacity: "1" },
+          "100%": { backgroundPosition: "200% 0", opacity: "0.7" },
         },
       },
     },

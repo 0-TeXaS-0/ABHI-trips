@@ -39,13 +39,46 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 overflow-hidden ${
         isScrolled
-          ? "bg-gradient-to-r from-blue-900/95 to-green-900/95 backdrop-blur-md shadow-xl border-b border-blue-200/30"
-          : "bg-gradient-to-r from-blue-900/90 to-green-900/90 backdrop-blur-sm shadow-lg"
+          ? "bg-gradient-to-r from-blue-900/90 to-blue-800/90 backdrop-blur-md shadow-lg border-b border-blue-200/20"
+          : "bg-gradient-to-r from-blue-900/85 to-blue-800/85 backdrop-blur-sm"
       }`}
     >
-      <div className="container mx-auto px-3 md:px-4">
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        {/* Single elegant wave animation */}
+        <div className="absolute inset-0 w-full h-full">
+          <div className="absolute bottom-0 left-0 w-full h-24 overflow-hidden">
+            <div className="absolute bottom-[-5%] left-[-5%] w-[110%] h-[200px] rotate-[-2deg] animate-wave-slow" 
+              style={{
+                background: 'linear-gradient(180deg, transparent 0%, rgba(59, 130, 246, 0.08) 50%, rgba(59, 130, 246, 0.15) 100%)',
+                borderRadius: '60% 70% 0 0'
+              }}
+            />
+            <div className="absolute bottom-[-8%] left-[-5%] w-[110%] h-[200px] rotate-[1deg] animate-wave-fast" 
+              style={{
+                background: 'linear-gradient(180deg, transparent 0%, rgba(14, 165, 233, 0.06) 50%, rgba(14, 165, 233, 0.12) 100%)',
+                borderRadius: '65% 75% 0 0',
+                animationDelay: '0.75s'
+              }}
+            />
+          </div>
+        </div>
+
+        {/* Subtle gradient overlay */}
+        <div className="absolute inset-0 opacity-30 mix-blend-soft-light bg-gradient-to-b from-blue-400/20 to-transparent"></div>
+        
+        {/* Minimal glow effects */}
+        <div className="absolute top-1/2 left-1/4 w-1 h-1 bg-blue-300/40 rounded-full animate-pulse"
+          style={{ animationDuration: '3s', animationDelay: '1s' }}
+        ></div>
+        <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-cyan-200/40 rounded-full animate-pulse"
+          style={{ animationDuration: '4s', animationDelay: '2s' }}
+        ></div>
+      </div>
+      
+      <div className="container mx-auto px-3 md:px-4 relative z-10">
         <div className="flex items-center justify-between h-16 md:h-18">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2 group" onClick={closeMenu}>
@@ -57,6 +90,7 @@ export default function Header() {
                 height={40}
                 className="md:w-12 md:h-12 rounded-full group-hover:scale-105 transition-transform duration-300 shadow-md"
               />
+              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-transparent via-white/50 to-transparent animate-shimmer" style={{ backgroundSize: "200% 100%" }}></div>
             </div>
             <div className="block">
               <div className="text-lg md:text-xl font-bold text-white group-hover:text-blue-300 transition-colors">

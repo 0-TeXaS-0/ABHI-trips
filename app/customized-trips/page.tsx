@@ -10,7 +10,7 @@ const trips = [
     description: "Tailor-made adventure experiences to suit your preferences.",
     price: "₹2,999",
     originalPrice: "₹3,499",
-    image: "/images/customized-adventure.jpg",
+    image: "/images/customized-adventure.jpeg",
   },
   {
     slug: "corporate-team-building",
@@ -18,7 +18,7 @@ const trips = [
     description: "Strengthen your team with engaging outdoor activities.",
     price: "₹3,499",
     originalPrice: "₹3,999",
-    image: "/images/corporate-team.jpg",
+    image: "/images/corporate-team.jpeg",
   },
   {
     slug: "photography-expedition",
@@ -26,7 +26,7 @@ const trips = [
     description: "Capture stunning landscapes and wildlife with expert guidance.",
     price: "₹4,299",
     originalPrice: "₹4,799",
-    image: "/images/photography-expedition.jpg",
+    image: "/images/photography-expedition.jpeg",
   },
   {
     slug: "family-adventure-package",
@@ -34,7 +34,7 @@ const trips = [
     description: "Create lasting memories with exciting family-friendly adventures.",
     price: "₹2,799",
     originalPrice: "₹3,299",
-    image: "/images/family-adventure.jpg",
+    image: "/images/family-adventure.jpeg",
   },
   {
     slug: "wellness-yoga-retreat",
@@ -42,7 +42,7 @@ const trips = [
     description: "Rejuvenate your mind and body in serene natural settings.",
     price: "₹3,999",
     originalPrice: "₹4,499",
-    image: "/images/wellness-yoga.jpg",
+    image: "/images/wellness-yoga.jpeg",
   },
   {
     slug: "adventure-sports-package",
@@ -50,7 +50,7 @@ const trips = [
     description: "Experience thrilling adventure sports like never before.",
     price: "₹4,999",
     originalPrice: "₹5,499",
-    image: "/images/adventure-sports.jpg",
+    image: "/images/adventure-sports.jpeg",
   },
 ]
 

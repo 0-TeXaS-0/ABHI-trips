@@ -196,7 +196,7 @@ export function EnhancedHeroSection() {
     <motion.section 
       ref={containerRef}
       style={{ opacity }}
-      className="relative min-h-[92vh] bg-gradient-to-br from-blue-900 to-blue-700 overflow-hidden"
+      className="relative min-h-screen pt-16 bg-gradient-to-br from-blue-900 to-blue-700 overflow-hidden"
     >
        {/* Adventure Background Image - Subtle and Non-intrusive */}
       <div 
@@ -231,8 +231,8 @@ export function EnhancedHeroSection() {
         }}
       />
 
-      {/* Floating geometric shapes with wave distortion */}
-      <div className="absolute inset-0 pointer-events-none opacity-40">
+      {/* Floating geometric shapes with wave distortion - Hidden on mobile */}
+      <div className="absolute inset-0 pointer-events-none opacity-40 hidden sm:block">
         {isMounted && geometricShapes.map((shape, i) => (
           <motion.div
             key={`shape-${i}`}
@@ -274,8 +274,8 @@ export function EnhancedHeroSection() {
         }}
       /> */}
       
-      {/* Animated Stars - Fixed in background */}
-      <div className="absolute inset-0 pointer-events-none opacity-60">
+      {/* Animated Stars - Fixed in background - Reduced on mobile */}
+      <div className="absolute inset-0 pointer-events-none opacity-60 hidden sm:block">
         {isMounted && !prefersReducedMotion && starPositions.map((star, i) => (
           <motion.div 
             key={`star-${i}`}
@@ -410,7 +410,7 @@ export function EnhancedHeroSection() {
         </svg>
       </div>
       
-      {/* Animated Particles */}
+      {/* Animated Particles - Simplified on mobile */}
       <div className="absolute inset-0 pointer-events-none z-10">
         {isMounted && bubblePositions.map((bubble, i) => (
           <motion.div 
@@ -438,8 +438,8 @@ export function EnhancedHeroSection() {
           />
         ))}
         
-        {/* Larger floating bubbles with gradient effect */}
-        <>
+        {/* Larger floating bubbles with gradient effect - Simplified on mobile */}
+        <div className="hidden sm:block">
           <motion.div 
             initial={{ opacity: 0, y: 0 }}
             animate={{ 
@@ -488,8 +488,7 @@ export function EnhancedHeroSection() {
             }}
             className="absolute bottom-40 left-20 w-32 h-32 md:w-40 md:h-40 bg-gradient-to-r from-indigo-500/20 to-pink-500/20 rounded-full blur-xl"
           />
-        </>
-        
+        </div>
         {/* Additional floating elements */}
         <motion.div 
           initial={{ opacity: 0, scale: 0.8 }}
@@ -516,23 +515,23 @@ export function EnhancedHeroSection() {
       </div>
       
       {/* Main Content */}
-      <div className="container mx-auto px-4 md:px-6 h-full flex flex-col justify-center pt-16 sm:pt-20 relative z-20">
-        <div className="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+      <div className="container mx-auto px-4 sm:px-6 h-full flex flex-col justify-center py-20 sm:py-24 relative z-20">
+        <div className="flex flex-col gap-8 lg:grid lg:grid-cols-2 lg:gap-12 items-center">
           {/* Left Content */}
-          <div className="max-w-3xl">
+          <div className="w-full text-center lg:text-left">
             {/* Enhanced Badge */}
             <motion.div 
               initial={{ opacity: 0, y: 20, scale: 0.9 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               transition={{ duration: 0.6, ease: "easeOut" }}
-              className="inline-flex items-center bg-white/10 backdrop-blur-md border border-white/20 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full mb-4 sm:mb-6 text-xs sm:text-sm group hover:bg-white/15 transition-all duration-300"
+              className="inline-flex items-center bg-white/10 backdrop-blur-md border border-white/20 px-3 py-2 rounded-full mb-6 text-sm group hover:bg-white/15 transition-all duration-300"
             >
               <motion.span 
-                className="text-yellow-300 mr-1 sm:mr-2"
+                className="text-yellow-300 mr-2"
                 animate={{ rotate: [0, 10, -10, 0] }}
                 transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
               >
-                <Star className="w-3 h-3 sm:w-4 sm:h-4 fill-current" />
+                <Star className="w-4 h-4 fill-current" />
               </motion.span>
               <span className="text-white font-medium">Karnataka's #1 Adventure Travel Company</span>
             </motion.div>
@@ -542,10 +541,10 @@ export function EnhancedHeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 leading-tight"
+            className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 leading-tight"
           >
             Your Perfect 
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 animate-pulse">
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500">
               Adventure Awaits
             </span>
           </motion.h1>
@@ -555,7 +554,7 @@ export function EnhancedHeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="text-lg md:text-xl lg:text-2xl text-blue-100 mb-4 sm:mb-6"
+            className="text-xl sm:text-2xl lg:text-3xl text-blue-100 mb-6"
           >
             In Karnataka's Mountains
           </motion.h2>
@@ -565,7 +564,7 @@ export function EnhancedHeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="text-base md:text-lg text-blue-100 mb-6 sm:mb-8 max-w-2xl"
+            className="text-base sm:text-lg text-blue-100 mb-8 max-w-2xl mx-auto lg:mx-0"
           >
             From thrilling one-day treks to weekend getaways, we create 
             unforgettable adventures for nature lovers and adventure seekers 
@@ -577,14 +576,14 @@ export function EnhancedHeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.5 }}
-            className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 mb-10 sm:mb-16"
+            className="flex flex-col sm:flex-row gap-4 mb-8 w-full max-w-md mx-auto lg:mx-0"
           >
             <motion.div
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
               className="relative overflow-hidden rounded-lg"
             >
-              <Link href="#featured-trips" className="group relative bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-purple-600 text-white font-semibold px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg flex items-center justify-center sm:justify-start transition-all duration-300">
+              <Link href="#featured-trips" className="group relative bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-purple-600 text-white font-semibold px-8 py-3 rounded-lg flex items-center justify-center transition-all duration-300 w-full">
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
                 <span className="mr-2 relative z-10">Explore Adventures</span> 
                 <ChevronRight className="h-4 w-4 relative z-10 group-hover:translate-x-1 transition-transform duration-300" />
@@ -594,7 +593,7 @@ export function EnhancedHeroSection() {
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Link href="/contact" className="group bg-transparent border-2 border-white/40 hover:border-white/80 hover:bg-white/10 text-white font-semibold px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg flex items-center justify-center transition-all duration-300 backdrop-blur-sm">
+              <Link href="/contact" className="group bg-transparent border-2 border-white/40 hover:border-white/80 hover:bg-white/10 text-white font-semibold px-8 py-3 rounded-lg flex items-center justify-center transition-all duration-300 backdrop-blur-sm w-full">
                 <span>Call Now</span>
               </Link>
             </motion.div>
@@ -605,7 +604,7 @@ export function EnhancedHeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.6 }}
-            className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 border-t border-white/20 pt-4 sm:pt-6 max-w-2xl"
+            className="grid grid-cols-3 gap-6 border-t border-white/20 pt-6 max-w-md mx-auto lg:mx-0"
           >
             <motion.div 
               className="text-center group"
@@ -619,7 +618,7 @@ export function EnhancedHeroSection() {
               >
                 <Calendar className="w-5 h-5 text-yellow-400 group-hover:scale-110 transition-transform duration-300" />
               </motion.div>
-              <h3 className="text-yellow-400 text-2xl sm:text-3xl font-bold">2000+</h3>
+              <h3 className="text-yellow-400 text-xl sm:text-2xl font-bold">2000+</h3>
               <p className="text-blue-100 text-xs sm:text-sm">Happy Travelers</p>
             </motion.div>
             <motion.div 
@@ -662,9 +661,9 @@ export function EnhancedHeroSection() {
           initial={{ opacity: 0, x: 50, scale: 0.9 }}
           animate={{ opacity: 1, x: 0, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
-          className="relative mb-8 lg:mb-0 lg:mt-0"
+          className="relative w-full lg:mt-0"
         >
-          <div className="relative w-full h-[250px] sm:h-[320px] lg:h-[400px] xl:h-[450px] max-w-lg mx-auto lg:max-w-none">
+          <div className="relative w-full h-[300px] sm:h-[400px] lg:h-[450px] max-w-md mx-auto lg:max-w-none">
             {/* Main Hero Image */}
             <motion.div
               className="relative w-full h-full rounded-2xl overflow-hidden shadow-xl"
@@ -677,136 +676,17 @@ export function EnhancedHeroSection() {
                 fill
                 className="object-cover object-center"
                 priority
-                sizes="(max-width: 640px) 90vw, (max-width: 768px) 80vw, (max-width: 1024px) 50vw, 40vw"
+                sizes="(max-width: 640px) 100vw, (max-width: 768px) 80vw, (max-width: 1024px) 50vw, 40vw"
               />
               {/* Gradient Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
-              
-              {/* Floating Badge on Image */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 1 }}
-                className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 bg-white/90 backdrop-blur-sm px-3 py-2 sm:px-4 sm:py-2 rounded-xl shadow-lg"
-              >
-                <div className="flex items-center gap-2">
-                  <Mountain className="w-3 h-3 sm:w-4 sm:h-4 text-blue-600" />
-                  <span className="text-xs sm:text-sm font-semibold text-gray-800">Live Adventure</span>
-                </div>
-              </motion.div>
             </motion.div>
 
-            {/* Floating Elements around the image */}
-            <motion.div
-              className="absolute -top-2 -right-2 sm:-top-4 sm:-right-4 bg-yellow-400 text-black p-2 sm:p-3 rounded-2xl shadow-lg"
-              animate={!prefersReducedMotion ? { 
-                y: [0, -10, 0],
-                rotate: [0, 5, 0]
-              } : {}}
-              transition={{
-                duration: 4,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-            >
-              <Star className="w-4 h-4 sm:w-6 sm:h-6 fill-current" />
-            </motion.div>
-
-            <motion.div
-              className="absolute -bottom-2 -left-2 sm:-bottom-4 sm:-left-4 bg-white/20 backdrop-blur-md border border-white/30 p-3 sm:p-4 rounded-2xl"
-              animate={!prefersReducedMotion ? { 
-                y: [0, 10, 0],
-                x: [0, 5, 0]
-              } : {}}
-              transition={{
-                duration: 5,
-                repeat: Infinity,
-                ease: "easeInOut",
-                delay: 1
-              }}
-            >
-              <div className="text-white text-center">
-                <div className="text-lg sm:text-2xl font-bold">25+</div>
-                <div className="text-xs">Destinations</div>
-              </div>
-            </motion.div>
-
-            {/* Animated particles around image */}
-            {!prefersReducedMotion && [...Array(6)].map((_, i) => (
-              <motion.div
-                key={`hero-particle-${i}`}
-                className="absolute w-1.5 h-1.5 sm:w-2 sm:h-2 bg-white/40 rounded-full"
-                style={{
-                  left: `${10 + (i * 15)}%`,
-                  top: `${20 + Math.sin(i) * 30}%`,
-                }}
-                animate={{
-                  y: [0, -20, 0],
-                  opacity: [0.3, 0.8, 0.3],
-                  scale: [0.8, 1.2, 0.8],
-                }}
-                transition={{
-                  duration: 3 + i * 0.5,
-                  repeat: Infinity,
-                  ease: [0.25, 0.46, 0.45, 0.94],
-                  delay: i * 0.3,
-                }}
-              />
-            ))}
           </div>
         </motion.div>
       </div>
       </div>
       
-      {/* Optimized Live Adventures Badge */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5, delay: 1 }}
-        className="absolute top-20 sm:top-24 right-4 sm:right-16 bg-white/10 backdrop-blur-md border border-green-400/30 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full flex items-center group hover:bg-white/15 transition-all duration-300 will-change-transform"
-      >
-        <motion.span 
-          className="h-2 sm:h-3 w-2 sm:w-3 bg-green-400 rounded-full mr-1.5 sm:mr-2"
-          animate={!prefersReducedMotion ? { 
-            scale: [1, 1.3, 1],
-            opacity: [0.7, 1, 0.7]
-          } : {}}
-          transition={{ 
-            duration: 3, 
-            repeat: Infinity,
-            ease: [0.25, 0.46, 0.45, 0.94]
-          }}
-        />
-        <span className="text-white text-xs sm:text-sm font-medium">Live Adventures</span>
-        <motion.div
-          className="ml-2 text-green-400"
-          animate={!prefersReducedMotion ? { rotate: [0, 360] } : {}}
-          transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
-        >
-          ⚡
-        </motion.div>
-      </motion.div>
-      
-      {/* Scroll Indicator */}
-      <motion.div
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: [0, 1, 0], y: [0, 10, 0] }}
-        transition={{ 
-          opacity: { repeat: Infinity, duration: 2, ease: "easeInOut" },
-          y: { repeat: Infinity, duration: 2, ease: "easeInOut" }
-        }}
-        className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex flex-col items-center z-30 hidden md:flex"
-      >
-        <span className="text-white/70 text-xs mb-1">Scroll to Explore</span>
-        <div className="w-5 h-8 border-2 border-white/30 rounded-full flex justify-center">
-          <motion.div 
-            animate={{ y: [0, 10, 0] }}
-            transition={{ repeat: Infinity, duration: 1.5 }}
-            className="w-1 h-2 bg-white/70 rounded-full mt-1"
-          />
-        </div>
-      </motion.div>
-
       {/* Optimized Pulsing Wave Rings - Desktop Only */}
       <div className="absolute inset-0 pointer-events-none hidden lg:block">
         {!prefersReducedMotion && [...Array(2)].map((_, i) => (

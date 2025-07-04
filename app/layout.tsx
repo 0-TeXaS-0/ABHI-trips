@@ -12,7 +12,12 @@ export const metadata: Metadata = {
   description:
     "Your trusted travel partner for weekend escapes and thrilling adventures across Karnataka and South India. Book one-day and two-day trips from Bangalore.",
   keywords: "travel, trips, Karnataka, South India, Bangalore, weekend getaway, trekking, adventure",
-    generator: 'v0.dev'
+  generator: 'v0.dev',
+  icons: {
+    icon: '/abhi-trip-logo.png',
+    apple: '/abhi-trip-logo.png',
+    shortcut: '/abhi-trip-logo.png'
+  }
 }
 
 export default function RootLayout({

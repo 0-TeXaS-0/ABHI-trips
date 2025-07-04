@@ -21,7 +21,6 @@ import Link from "next/link"
 import { FeaturedTripsCarousel } from "@/components/featured-trips-carousel"
 import { TestimonialsSection } from "@/components/testimonials-section"
 import { StatsSection } from "@/components/stats-section"
-import { AnnouncementBar } from "@/components/announcement-bar"
 import { EnhancedHeroSection } from "@/components/enhanced-hero-section"
 
 export default function HomePage() {
@@ -95,8 +94,6 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen">
-      <AnnouncementBar />
-
       {/* Enhanced Hero Section */}
       <EnhancedHeroSection />
 
