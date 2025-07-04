@@ -211,7 +211,7 @@ export function EnhancedHeroSection() {
       >
         <Image 
           src="https://firebasestorage.googleapis.com/v0/b/react-dnd-flow-chart.appspot.com/o/mountains-silhouette.png?alt=media"
-          alt="Mountains"
+          alt=""
           width={2000}
           height={400}
           className="w-full"
