@@ -83,6 +83,21 @@ const featuredTrips = [
 		highlights: ["White water rafting", "Wildlife safari", "Kayaking", "Jungle stay"],
 		category: "Wildlife",
 	},
+	{
+		id: 6,
+		title: "Nandi Hills Sunrise Trek",
+		slug: "nandi-hills-sunrise-trek",
+		location: "Nandi Hills, Karnataka",
+		duration: "1 Day",
+		groupSize: "15-25 people",
+		rating: 4.7,
+		price: "₹799",
+		image:
+			"https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+		description: "Witness breathtaking sunrise from historic Nandi Hills",
+		highlights: ["Sunrise viewpoint", "Historical fort", "Photography spots", "Bird watching"],
+		category: "Adventure",
+	},
 ]
 
 export function FeaturedTripsCarousel() {
@@ -107,7 +122,9 @@ export function FeaturedTripsCarousel() {
 											width={400}
 											height={300}
 											className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-											unoptimized
+											loading="eager"
+											priority={true}
+											unoptimized={true}
 										/>
 										<div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
 										<Badge className="absolute top-3 left-3 bg-blue-600 hover:bg-blue-700 text-white">
