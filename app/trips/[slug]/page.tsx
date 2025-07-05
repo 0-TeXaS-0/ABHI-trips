@@ -212,7 +212,7 @@ const getAllTrips = () => [
     groupSize: "15-18",
     rating: 4.6,
     reviews: 87,
-    slug: "gokarna-beach-retreat",
+    slug: "gokarna-murudeshwar-trip",
     highlights: ["Om Beach", "Kudle Beach", "Temple visits", "Beach activities"],
     location: "480km from Bangalore",
     category: "Two Day Trip",

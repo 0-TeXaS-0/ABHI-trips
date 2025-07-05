@@ -41,7 +41,7 @@ const testimonials = [
     rating: 4,
     text: "Great experience at Gokarna! The beach was pristine and the temple visits were enlightening. The accommodation was comfortable and the food was delicious.",
     image: "/placeholder.svg?height=80&width=80",
-    trip: "Gokarna Beach Retreat",
+    trip: "Gokarna and Murudeshwar Trip",
   },
 ]
 
