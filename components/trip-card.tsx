@@ -141,7 +141,7 @@ export function TripCard({ trip }: TripCardProps) {
           {/* Action Buttons */}
           <div className="flex flex-col gap-3 pt-4 border-t border-gray-100">
             {/* View Details Button */}
-            <Link href={`/one-day-trips/${trip.slug}`}>
+            <Link href={`/trips/${trip.slug}`}>
               <button className="w-full inline-flex items-center justify-center rounded-md text-sm font-semibold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-md hover:shadow-lg transform hover:scale-105 h-10 px-4">
                 View Details
                 <ArrowRight className="ml-2 h-4 w-4" />
