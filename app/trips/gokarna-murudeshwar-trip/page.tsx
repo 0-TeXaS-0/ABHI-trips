@@ -22,11 +22,12 @@ export default function GokarnaMurudeshwarTripPage() {
         {/* Main image with overlay */}
         <div className="absolute inset-0 z-10">
           <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/43def08def9d0d28c1dbc687fad3de76.jpg-VvsWESStwC7nIjCnZQPA55OSchv74g.jpeg"
+            src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80"
             alt="Gokarna and Murudeshwar Trip"
             fill
             className="object-cover opacity-75 transform hover:scale-105 transition-transform duration-700"
             priority
+            unoptimized
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent" />
         </div>
@@ -52,7 +53,7 @@ export default function GokarnaMurudeshwarTripPage() {
               </div>
               
               <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight drop-shadow-md">
-                Gokarna and Murudeshwar Trip
+                Gokarna Beach Retreat
               </h1>
               
               <div className="flex flex-wrap gap-4 items-center mt-2">

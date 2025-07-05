@@ -18,7 +18,7 @@ const featuredTrips = [
 		rating: 4.8,
 		price: "₹3,500",
 		image:
-			"https://hebbkx1anhila5yf.public.blob.vercel-storage.com/aab9fd021e81cc9e438ef17de218912a.jpg-U5rdEPZFaaX6DHa7xxb9JNrUZigy2l.jpeg",
+			"https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80",
 		description: "Pristine beaches, temple visits, and coastal camping experience",
 		highlights: ["Beach camping", "Temple visits", "Sunset views", "Water sports"],
 		category: "Beach",
@@ -78,7 +78,7 @@ const featuredTrips = [
 		rating: 4.9,
 		price: "₹4,500",
 		image:
-			"https://hebbkx1anhila5yf.public.blob.vercel-storage.com/dandeli-KBLW5S1uIQH2cYSzOoKLDNp6jOAYLb.jpg",
+			"https://images.unsplash.com/photo-1503220317375-aaad61436b1b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
 		description: "Exciting wildlife safari, river rafting, and jungle stay",
 		highlights: ["White water rafting", "Wildlife safari", "Kayaking", "Jungle stay"],
 		category: "Wildlife",
@@ -107,6 +107,7 @@ export function FeaturedTripsCarousel() {
 											width={400}
 											height={300}
 											className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+											unoptimized
 										/>
 										<div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
 										<Badge className="absolute top-3 left-3 bg-blue-600 hover:bg-blue-700 text-white">

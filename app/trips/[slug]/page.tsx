@@ -64,7 +64,7 @@ const getAllTrips = () => [
     groupSize: "15-20",
     rating: 4.8,
     reviews: 124,
-    slug: "coorg-coffee-plantation-trek",
+    slug: "coorg-trip",
     highlights: ["Coffee plantation", "Abbey Falls", "Raja's Seat", "Local cuisine"],
     location: "250km from Bangalore",
     category: "Two Day Trip",
@@ -167,7 +167,7 @@ const getAllTrips = () => [
     groupSize: "15-20",
     rating: 4.7,
     reviews: 98,
-    slug: "chikmagalur-hill-station",
+    slug: "chikmagalur-trip",
     highlights: ["Mullayanagiri peak", "Coffee museum", "Hebbe Falls", "Hill station"],
     location: "240km from Bangalore",
     category: "Two Day Trip",
@@ -200,11 +200,11 @@ const getAllTrips = () => [
   },
   {
     id: 5,
-    title: "Gokarna Beach & Temple Tour",
+    title: "Gokarna Beach Retreat",
     description:
       "Perfect blend of spirituality and beach relaxation at the pristine beaches of Gokarna with temple visits.",
     image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/43def08def9d0d28c1dbc687fad3de76.jpg-VvsWESStwC7nIjCnZQPA55OSchv74g.jpeg",
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80",
     price: "₹3,199",
     originalPrice: "₹3,699",
     duration: "2 Days / 1 Night",

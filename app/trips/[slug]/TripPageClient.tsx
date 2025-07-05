@@ -38,7 +38,7 @@ const getAllTrips = () => [
     groupSize: "15-20",
     rating: 4.8,
     reviews: 124,
-    slug: "skandagiri-night-trek",
+    slug: "skandagiri-sunrise-trek",
     highlights: [
       "Early morning trek to one of Karnataka's most scenic sunrise points",
       "Mesmerizing sunrise view above the clouds",
@@ -586,7 +586,7 @@ const getAllTrips = () => [
     groupSize: "15-20",
     rating: 4.8,
     reviews: 124,
-    slug: "coorg-coffee-plantation-trek",
+    slug: "coorg-trip",
     highlights: [
       "Mandalpatti View Point",
       "Abbey Falls – a roaring cascade in the heart of nature",
@@ -708,7 +708,7 @@ const getAllTrips = () => [
     groupSize: "15-20",
     rating: 4.7,
     reviews: 98,
-    slug: "chikmagalur-hill-station",
+    slug: "chikmagalur-trip",
     highlights: [
       "Mullayanagiri Peak",
       "Bababudangiri",
@@ -780,11 +780,11 @@ const getAllTrips = () => [
   },
   {
     id: 14,
-    title: "Gokarna Beach & Temple Tour",
+    title: "Gokarna Beach Retreat",
     description:
       "A perfect weekend escape combining beach bliss and spiritual vibes. Relax on serene shores, explore scenic trails, and visit iconic coastal temples.",
     image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/43def08def9d0d28c1dbc687fad3de76.jpg-VvsWESStwC7nIjCnZQPA55OSchv74g.jpeg",
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80",
     price: "₹3,699",
     originalPrice: "₹3,699",
     duration: "2 Days / 1 Night",
@@ -992,7 +992,6 @@ const getAllTrips = () => [
     exclusions: ["Personal expenses", "Additional activities", "Travel insurance"],
     whatToBring: ["Comfortable clothes", "Binoculars", "Camera", "Hat and sunscreen", "Personal medication"],
   },
-  // Add remaining trips with updated content from user's data
   {
     id: 17,
     title: "Netravati Trek",
@@ -1031,9 +1030,9 @@ const getAllTrips = () => [
   },
   {
     id: 18,
-    title: "Wayanad Spice Plantation Tour",
+    title: "Wayanad Adventure",
     description:
-      "Explore the aromatic spice plantations of Wayanad with guided tours, wildlife spotting, and cultural experiences.",
+      "Explore the lush forests and waterfalls of Wayanad",
     image:
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/84fc1cbf7bd4a97d9893abfdc41e0f9d%20%281%29.jpg-tniux34eccmxX3eI266tYCVwuB2QK3.jpeg",
     price: "₹3,899",
@@ -1043,7 +1042,7 @@ const getAllTrips = () => [
     groupSize: "15-20",
     rating: 4.6,
     reviews: 89,
-    slug: "wayanad-spice-plantation",
+    slug: "wayanad-adventure",
     highlights: ["Spice plantations", "Wildlife sanctuary", "Tribal culture", "Waterfalls"],
     location: "280km from Bangalore",
     category: "Two Day Trip",
@@ -1288,6 +1287,67 @@ const getAllTrips = () => [
       "Personal medication",
       "Courage and enthusiasm",
       "Camera for memories",
+    ],
+  },
+  {
+    id: 19,
+    title: "Dandeli Wildlife Adventure",
+    description:
+      "Experience thrilling water sports and jungle adventures in the nature paradise of Dandeli.",
+    image:
+      "https://images.unsplash.com/photo-1503220317375-aaad61436b1b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+    price: "₹4,999",
+    originalPrice: "₹5,499",
+    duration: "2 Days / 1 Night",
+    difficulty: "Moderate",
+    groupSize: "15-20",
+    rating: 4.8,
+    reviews: 104,
+    slug: "dandeli-adventure",
+    highlights: ["White water rafting", "Jungle safari", "Kayaking", "Zip-lining"],
+    location: "450km from Bangalore",
+    category: "Two Day Trip",
+    fullDescription:
+      "Experience the thrill of adventure in the pristine forests of Dandeli. From exhilarating white water rafting to peaceful jungle safaris, Dandeli offers the perfect blend of adrenaline and nature. This well-preserved wildlife sanctuary is also home to diverse flora and fauna, making it an ideal destination for nature enthusiasts and adventure seekers alike.",
+    itinerary: [
+      { time: "Day 1 - 6:00 AM", activity: "Departure from Bangalore" },
+      { time: "Day 1 - 2:00 PM", activity: "Arrive in Dandeli" },
+      { time: "Day 1 - 2:30 PM", activity: "Check-in at resort" },
+      { time: "Day 1 - 3:30 PM", activity: "Lunch and briefing" },
+      { time: "Day 1 - 4:30 PM", activity: "White water rafting (Grade 2-3 rapids)" },
+      { time: "Day 1 - 7:00 PM", activity: "Return to resort" },
+      { time: "Day 1 - 8:00 PM", activity: "Bonfire and dinner" },
+      { time: "Day 2 - 7:00 AM", activity: "Breakfast" },
+      { time: "Day 2 - 8:00 AM", activity: "Jungle safari in Dandeli Wildlife Sanctuary" },
+      { time: "Day 2 - 11:00 AM", activity: "Adventure activities (kayaking, zip-lining)" },
+      { time: "Day 2 - 1:00 PM", activity: "Lunch" },
+      { time: "Day 2 - 2:00 PM", activity: "Departure to Bangalore" },
+      { time: "Day 2 - 10:00 PM", activity: "Reach Bangalore" },
+    ],
+    inclusions: [
+      "Transportation from Bangalore",
+      "Accommodation (1 night)",
+      "All meals (1 breakfast, 2 lunches, 1 dinner)",
+      "White water rafting",
+      "Jungle safari",
+      "Basic adventure activities",
+      "Professional guide",
+    ],
+    exclusions: [
+      "Personal expenses",
+      "Additional adventure activities",
+      "Travel insurance",
+      "Tips",
+      "Anything not mentioned in inclusions",
+    ],
+    whatToBring: [
+      "Change of clothes",
+      "Swimming attire",
+      "Sports shoes",
+      "Insect repellent",
+      "Sunscreen",
+      "Personal medication",
+      "Binoculars for wildlife spotting",
     ],
   },
 ]

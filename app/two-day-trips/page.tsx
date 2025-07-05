@@ -41,11 +41,11 @@ const twoDayTrips = [
   },
   {
     id: 3,
-    title: "Gokarna and Murudeshwar Trip",
+    title: "Gokarna Beach Retreat",
     description:
       "Perfect blend of spirituality and beach relaxation at the pristine beaches of Gokarna with temple visits.",
     image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/43def08def9d0d28c1dbc687fad3de76.jpg-VvsWESStwC7nIjCnZQPA55OSchv74g.jpeg",
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80",
     price: "₹3,699",
     originalPrice: "₹4,199",
     duration: "2 Days / 1 Night",
