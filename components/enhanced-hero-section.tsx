@@ -13,7 +13,6 @@ export function EnhancedHeroSection() {
   const containerRef = useRef<HTMLDivElement>(null)
   // Removed scrolling effect
   const opacity = 1
-  const mountainControls = useAnimation()
   const contentControls = useAnimation()
   const [animationComplete, setAnimationComplete] = useState(false)
   const [mousePosition, setMousePosition] = useState({ x: 50, y: 50 })
@@ -168,12 +167,6 @@ export function EnhancedHeroSection() {
   useEffect(() => {
     if (!isMounted) return
 
-    mountainControls.start({
-      opacity: 1,
-      y: 0,
-      transition: { duration: 1.2, ease: [0.25, 0.46, 0.45, 0.94], delay: 0.2 }
-    })
-
     contentControls.start({
       opacity: 1,
       y: 0,
@@ -186,7 +179,7 @@ export function EnhancedHeroSection() {
     }, 2000)
     
     return () => clearTimeout(timer)
-  }, [mountainControls, contentControls, isMounted])
+  }, [contentControls, isMounted])
   
   return (
     <motion.section 
@@ -202,22 +195,7 @@ export function EnhancedHeroSection() {
         }}
       />
 
-      {/* Enhanced Mountain Silhouettes - Parallax Effect */}
-      <motion.div 
-        className="absolute bottom-0 left-0 w-full opacity-30 pointer-events-none z-0"
-        style={{ y: 0 }} /* Removed parallax effect */
-        initial={{ opacity: 0, y: 50 }}
-        animate={mountainControls}
-      >
-        <Image 
-          src="https://firebasestorage.googleapis.com/v0/b/react-dnd-flow-chart.appspot.com/o/mountains-silhouette.png?alt=media"
-          width={2000}
-          height={400}
-          className="w-full"
-          priority
-          alt="Mountain silhouette"
-        />
-      </motion.div>
+
 
       {/* Mouse-following parallax gradient */}
       <motion.div
