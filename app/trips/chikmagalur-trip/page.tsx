@@ -22,11 +22,12 @@ export default function ChikmagalurTripPage() {
         {/* Main image with overlay */}
         <div className="absolute inset-0 z-10">
           <Image
-            src="https://images.unsplash.com/photo-1586351012965-861623eacf69?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3"
+            src="https://images.unsplash.com/photo-1526392060635-9d6019884377?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
             alt="Chikmagalur Backpacking Trip"
             fill
             className="object-cover opacity-75 transform hover:scale-105 transition-transform duration-700"
             priority
+            unoptimized
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent" />
         </div>

@@ -1385,8 +1385,17 @@ export default function TripPageClient({ params }: TripPageClientProps) {
   const trips = getAllTrips()
   const trip = trips.find((t) => t.slug === params.slug)
 
-  if (!trip) {
+  // If the trip isn't found in our data but might have a static page,
+  // don't call notFound() for specific slugs that we know have static pages
+  const hasStaticPage = ["gokarna-murudeshwar-trip", "chikmagalur-trip", "coorg-trip", "nandi-hills-sunrise-trek"].includes(params.slug)
+  
+  if (!trip && !hasStaticPage) {
     notFound()
+  }
+
+  // Early return to avoid trying to render with undefined trip data
+  if (!trip) {
+    return null; // Next.js will use the static page instead
   }
 
   return (

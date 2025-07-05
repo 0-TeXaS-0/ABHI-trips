@@ -25,7 +25,7 @@ const featuredTrips = [
 	},
 	{
 		id: 2,
-		title: "Coorg Coffee Plantation Trek",
+		title: "Coorg Coffee Plantation Experience",
 		slug: "coorg-trip",
 		location: "Coorg, Karnataka",
 		duration: "2 Days",
@@ -33,7 +33,7 @@ const featuredTrips = [
 		rating: 4.9,
 		price: "₹4,200",
 		image:
-			"https://hebbkx1anhila5yf.public.blob.vercel-storage.com/fde19972731d42caeb767943d1bfe30f.jpg-HCE5ARqj0rFEkK330EldQpp56VFzTT.jpeg",
+			"https://images.unsplash.com/photo-1669744665015-33f3a2f657b3?q=80&w=1342&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 		description: "Explore coffee plantations, waterfalls, and hill station beauty",
 		highlights: ["Coffee plantation tour", "Abbey Falls", "Raja's Seat", "Local cuisine"],
 		category: "Hill Station",
@@ -55,7 +55,7 @@ const featuredTrips = [
 	},
 	{
 		id: 4,
-		title: "Chikmagalur Coffee Land",
+		title: "Chikmagalur Backpacking Trip",
 		slug: "chikmagalur-trip",
 		location: "Chikmagalur, Karnataka",
 		duration: "2 Days",
@@ -63,7 +63,7 @@ const featuredTrips = [
 		rating: 4.8,
 		price: "₹4,000",
 		image:
-			"https://hebbkx1anhila5yf.public.blob.vercel-storage.com/84637d5cb7eda8d86ea0fa3fdc31e7fb.jpg-6dYwUVgvHOarBkEgd5A2ErgCvcNH7M.jpeg",
+			"https://images.unsplash.com/photo-1526392060635-9d6019884377?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
 		description: "Coffee estates, hill treks, and serene landscapes",
 		highlights: ["Mullayanagiri Peak", "Coffee plantation", "Hebbe Falls", "Baba Budangiri"],
 		category: "Adventure",

@@ -84,12 +84,13 @@ export default function NandiHillsSunriseTrekPage() {
       {/* Hero Section */}
       <div className="relative h-[60vh] md:h-[70vh] overflow-hidden">
         <Image 
-          src="/images/adventure-sports.jpeg" 
+          src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
           alt={trip.title} 
           fill 
           className="object-cover" 
           priority
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 60vw"
+          unoptimized
         />
         <div className="absolute inset-0 bg-black/40" />
         <div className="absolute inset-0 flex items-center justify-center">

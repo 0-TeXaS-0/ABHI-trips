@@ -5,11 +5,11 @@ import Link from "next/link"
 const twoDayTrips = [
   {
     id: 1,
-    title: "Coorg Trip – The Scotland of India",
+    title: "Coorg Coffee Plantation Experience",
     description:
       "Immerse yourself in the misty hills of Coorg with coffee plantation tours, waterfalls, and authentic local culture.",
     image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/84fc1cbf7bd4a97d9893abfdc41e0f9d%20%281%29.jpg-tniux34eccmxX3eI266tYCVwuB2QK3.jpeg",
+      "https://images.unsplash.com/photo-1669744665015-33f3a2f657b3?q=80&w=1342&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     price: "₹3,999",
     originalPrice: "₹4,499",
     duration: "2 Days / 1 Night",
@@ -27,7 +27,7 @@ const twoDayTrips = [
     description:
       "Relax in the coffee capital of India with scenic drives, trekking, and plantation visits in the Western Ghats.",
     image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/e770a010b14b8e61b2ab9c1cfc9c9fb0.jpg-aZ2r0TEKDfqQ010qIdAuLHypP4oLeG.jpeg",
+      "https://images.unsplash.com/photo-1526392060635-9d6019884377?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
     price: "₹3,999",
     originalPrice: "₹4,499",
     duration: "2 Days / 1 Night",

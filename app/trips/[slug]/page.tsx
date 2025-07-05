@@ -288,6 +288,52 @@ const getAllTrips = () => [
     whatToBring: ["Warm clothing", "Comfortable shoes", "Camera", "Personal medication", "Light jacket", "Umbrella"],
   },
   {
+    id: 8,
+    title: "Coorg Coffee Plantation Experience",
+    description:
+      "Discover the lush beauty and cultural richness of Coorg with coffee plantation tours, waterfalls, and authentic local culture.",
+    image:
+      "https://images.unsplash.com/photo-1677282593405-c896e99fe13b?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=1200",
+    price: "₹3,999",
+    originalPrice: "₹4,499",
+    duration: "2 Days / 1 Night",
+    difficulty: "Easy",
+    groupSize: "15-20",
+    rating: 4.8,
+    reviews: 124,
+    slug: "coorg-trip",
+    highlights: ["Coffee plantation tour", "Abbey Falls", "Raja's Seat", "Local cuisine"],
+    location: "250km from Bangalore",
+    category: "Two Day Trip",
+    fullDescription:
+      "Immerse yourself in the misty hills of Coorg, known as the 'Scotland of India'. This 2-day escape offers majestic viewpoints, roaring waterfalls, coffee plantations, and a rich cultural experience.",
+    itinerary: [
+      { time: "Day 1 - 6:00 AM", activity: "Pickup from Bangalore" },
+      { time: "11:00 AM", activity: "Reach Coorg, check-in" },
+      { time: "12:30 PM", activity: "Lunch" },
+      { time: "2:00 PM", activity: "Visit Abbey Falls" },
+      { time: "4:00 PM", activity: "Coffee plantation tour" },
+      { time: "6:00 PM", activity: "Return to stay" },
+      { time: "8:00 PM", activity: "Dinner and overnight stay" },
+      { time: "Day 2 - 8:00 AM", activity: "Breakfast" },
+      { time: "9:30 AM", activity: "Visit Raja's Seat" },
+      { time: "11:00 AM", activity: "Local market visit" },
+      { time: "1:00 PM", activity: "Lunch" },
+      { time: "2:00 PM", activity: "Departure to Bangalore" },
+      { time: "8:00 PM", activity: "Reach Bangalore" },
+    ],
+    inclusions: [
+      "Transportation from Bangalore",
+      "Accommodation (1 night)",
+      "All meals",
+      "Coffee plantation tour",
+      "Entry fees",
+      "Professional guide",
+    ],
+    exclusions: ["Personal expenses", "Additional activities", "Travel insurance", "Tips"],
+    whatToBring: ["Comfortable clothes", "Walking shoes", "Camera", "Light jacket", "Umbrella", "Personal medication"],
+  },
+  {
     id: 7,
     title: "Kabini Wildlife Safari",
     description:
@@ -344,8 +390,16 @@ const getAllTrips = () => [
 
 export async function generateStaticParams() {
   const trips = getAllTrips()
-  return trips.map((trip) => ({
-    slug: trip.slug,
+  const staticSlugs = ["gokarna-murudeshwar-trip", "chikmagalur-trip", "coorg-trip", "nandi-hills-sunrise-trek"]
+  
+  // Combine dynamic trips with explicitly defined static slugs
+  const allSlugs = [...trips.map(trip => trip.slug), ...staticSlugs]
+  
+  // Remove duplicates
+  const uniqueSlugs = [...new Set(allSlugs)]
+  
+  return uniqueSlugs.map((slug) => ({
+    slug,
   }))
 }
 
