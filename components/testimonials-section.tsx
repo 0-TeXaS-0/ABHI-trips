@@ -12,9 +12,9 @@ const testimonials = [
     name: "Priya Sharma",
     location: "Bangalore",
     rating: 5,
-    text: "Amazing experience with Abhi Trip! The Coorg coffee plantation tour was perfectly organized. Our guide was knowledgeable and the group size was just right. Highly recommended!",
+    text: "Amazing experience with Abhi Trip! The Coorg trip was perfectly organized. Our guide was knowledgeable and the group size was just right. The viewpoints were breathtaking! Highly recommended!",
     image: "/placeholder.svg?height=80&width=80",
-    trip: "Coorg Coffee Plantation Trek",
+    trip: "Coorg Trip – The Scotland of India",
   },
   {
     id: 2,

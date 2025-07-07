@@ -25,7 +25,7 @@ const featuredTrips = [
 	},
 	{
 		id: 2,
-		title: "Coorg Coffee Plantation Experience",
+		title: "Coorg Trip – The Scotland of India",
 		slug: "coorg-trip",
 		location: "Coorg, Karnataka",
 		duration: "2 Days",
@@ -34,8 +34,8 @@ const featuredTrips = [
 		price: "₹4,200",
 		image:
 			"https://images.unsplash.com/photo-1669744665015-33f3a2f657b3?q=80&w=1342&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-		description: "Explore coffee plantations, waterfalls, and hill station beauty",
-		highlights: ["Coffee plantation tour", "Abbey Falls", "Raja's Seat", "Local cuisine"],
+		description: "Explore majestic viewpoints, waterfalls, and hill station beauty",
+		highlights: ["Mandalpatti View Point", "Abbey Falls", "Raja's Seat", "Local cuisine"],
 		category: "Hill Station",
 	},
 	{
@@ -65,7 +65,7 @@ const featuredTrips = [
 		image:
 			"https://images.unsplash.com/photo-1526392060635-9d6019884377?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
 		description: "Coffee estates, hill treks, and serene landscapes",
-		highlights: ["Mullayanagiri Peak", "Coffee plantation", "Hebbe Falls", "Baba Budangiri"],
+		highlights: ["Mullayanagiri Peak", "Hill station views", "Hebbe Falls", "Baba Budangiri"],
 		category: "Adventure",
 	},
 	{

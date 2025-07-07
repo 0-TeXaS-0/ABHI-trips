@@ -32,10 +32,10 @@ export default function GalleryPage() {
     {
       id: 4,
       src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/84fc1cbf7bd4a97d9893abfdc41e0f9d%20%281%29.jpg-tniux34eccmxX3eI266tYCVwuB2QK3.jpeg",
-      title: "Coorg Coffee Plantations",
+      title: "Coorg – The Scotland of India",
       location: "Coorg",
-      category: "Plantation Tour",
-      description: "Misty hills and aromatic coffee plantation experience",
+      category: "Hill Station",
+      description: "Misty hills and scenic viewpoints experience",
     },
     {
       id: 5,

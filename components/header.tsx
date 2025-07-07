@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet"
+import { Sheet, SheetContent, SheetTrigger, SheetClose, SheetTitle } from "@/components/ui/sheet"
 import { Menu, X, ChevronDown } from "lucide-react"
 import { InstagramIcon } from "@/components/icons/instagram"
 import { WhatsAppIcon } from "@/components/icons/whatsapp"
@@ -142,6 +142,7 @@ export default function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-80 bg-white border-gray-200">
+              <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
               <div className="flex items-center justify-between mb-6">
                 <div className="flex items-center space-x-3">
                   <Image src="/abhi-trip-logo.png" alt="Abhi Trip" width={35} height={35} className="rounded-full" />

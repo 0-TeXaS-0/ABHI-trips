@@ -1,7 +1,6 @@
 "use client"
 
 import type React from "react"
-
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -9,10 +8,7 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Calendar } from "@/components/ui/calendar"
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
-import { CalendarIcon, CheckCircle } from "lucide-react"
-import { format, isFriday } from "date-fns"
+import { CheckCircle } from "lucide-react"
 
 interface BookingFormProps {
   tripTitle?: string
@@ -20,7 +16,6 @@ interface BookingFormProps {
 }
 
 export function BookingForm({ tripTitle = "Customized Trip", tripPrice = "Contact for pricing" }: BookingFormProps) {
-  const [date, setDate] = useState<Date>()
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [formData, setFormData] = useState({
     name: "",
@@ -28,6 +23,7 @@ export function BookingForm({ tripTitle = "Customized Trip", tripPrice = "Contac
     email: "",
     travelers: "",
     message: "",
+    preferredDate: "",
   })
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -41,7 +37,7 @@ I would like to book the following trip:
 🎯 *Trip Details:*
 • Trip: ${tripTitle}
 • Price: ${tripPrice} per person
-• Preferred Date: ${date ? format(date, "PPP") : "Not specified"}
+• Preferred Date: ${formData.preferredDate || "Not specified"}
 
 👤 *My Details:*
 • Name: ${formData.name}
@@ -162,27 +158,18 @@ Please confirm the availability and provide payment details. Thank you!`
               </Select>
             </div>
             <div className="space-y-2">
-              <Label className="text-sm font-semibold text-gray-700">Preferred Date (Fridays Only) *</Label>
-              <Popover>
-                <PopoverTrigger asChild>
-                  <Button
-                    variant="outline"
-                    className="w-full h-12 justify-start text-left font-normal border-gray-300 focus:border-blue-500 focus:ring-blue-500"
-                  >
-                    <CalendarIcon className="mr-2 h-4 w-4" />
-                    {date ? format(date, "PPP") : "Pick a date"}
-                  </Button>
-                </PopoverTrigger>
-                <PopoverContent className="w-auto p-0">
-                  <Calendar
-                    mode="single"
-                    selected={date}
-                    onSelect={setDate}
-                    disabled={(date) => !isFriday(date) || date < new Date()}
-                    initialFocus
-                  />
-                </PopoverContent>
-              </Popover>
+              <Label htmlFor="preferredDate" className="text-sm font-semibold text-gray-700">
+                Preferred Date *
+              </Label>
+              <Input
+                id="preferredDate"
+                type="text"
+                placeholder="e.g., July 15-16, 2025 or Next weekend"
+                value={formData.preferredDate || ""}
+                onChange={(e) => handleInputChange("preferredDate", e.target.value)}
+                className="h-12 border-gray-300 focus:border-blue-500 focus:ring-blue-500"
+                required
+              />
             </div>
           </div>
 
@@ -209,9 +196,9 @@ Please confirm the availability and provide payment details. Thank you!`
               <p>
                 <strong>Price:</strong> {tripPrice} per person
               </p>
-              {date && (
+              {formData.preferredDate && (
                 <p>
-                  <strong>Date:</strong> {format(date, "PPP")}
+                  <strong>Date:</strong> {formData.preferredDate}
                 </p>
               )}
               {formData.travelers && (

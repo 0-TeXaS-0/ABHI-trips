@@ -1,8 +1,10 @@
 import React from 'react';
-import { ArrowLeft, CalendarClock, Clock, MapPin, CheckCircle2, XCircle, PackageOpen, Tent, Utensils, Car, Heart, Star, Users, Camera, Coffee, Mountain, Sunrise } from 'lucide-react';
+import { ArrowLeft, CalendarClock, Clock, MapPin, CheckCircle2, XCircle, PackageOpen, Tent, Utensils, Car, Heart, Star, Users, Camera, Coffee, Mountain, Sunrise, Phone, MessageCircle } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { AnnouncementBar } from '@/components/announcement-bar';
+import { Card, CardHeader, CardContent, CardTitle } from "@/components/ui/card";
+import { BookingForm } from "@/components/booking-form";
 
 export default function OotyAdventurePage() {
   return (
@@ -96,16 +98,23 @@ export default function OotyAdventurePage() {
           {/* Main Content */}
           <div className="lg:col-span-2 space-y-8">
             {/* Overview */}
-            <section className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+            <section className="relative bg-gradient-to-br from-indigo-50 via-purple-50 to-white rounded-xl shadow-lg p-6 border border-indigo-100 hover:shadow-2xl transition-all duration-300 group overflow-hidden">
+              <div className="absolute -top-8 -right-8 w-32 h-32 bg-gradient-to-br from-indigo-200/30 to-purple-200/20 rounded-full blur-2xl pointer-events-none"></div>
+              <div className="absolute -bottom-8 -left-8 w-24 h-24 bg-gradient-to-tr from-purple-200/30 to-indigo-200/20 rounded-full blur-xl pointer-events-none"></div>
               <div className="flex items-center mb-4">
-                <div className="w-10 h-10 flex items-center justify-center bg-gradient-to-br from-indigo-500 to-purple-600 rounded-full mr-3">
+                <div className="w-10 h-10 flex items-center justify-center bg-gradient-to-br from-indigo-500 to-purple-600 rounded-full mr-3 shadow-md group-hover:scale-110 transition-transform duration-300">
                   <Coffee className="h-5 w-5 text-white" />
                 </div>
-                <h2 className="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-700 bg-clip-text text-transparent">Overview</h2>
+                <h2 className="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-700 bg-clip-text text-transparent relative">
+                  Overview
+                  <span className="block h-1 w-10 bg-gradient-to-r from-indigo-400 to-purple-400 rounded-full mt-1 group-hover:w-20 transition-all duration-300"></span>
+                </h2>
               </div>
-              <p className="text-gray-700 leading-relaxed text-lg">
-                Experience the magic of misty hills, cascading waterfalls, and scenic landscapes – your ideal weekend getaway to Ooty!
-              </p>
+              <div className="bg-white/80 rounded-lg p-4 border border-indigo-50 shadow-inner group-hover:shadow-lg transition-all duration-300">
+                <p className="text-gray-700 leading-relaxed text-lg">
+                  Experience the magic of misty hills, cascading waterfalls, and scenic landscapes – your ideal weekend getaway to Ooty!
+                </p>
+              </div>
             </section>
 
             {/* Highlights */}
@@ -553,117 +562,137 @@ export default function OotyAdventurePage() {
             </section>
           </div>
           
-          {/* Sidebar */}
-          <div className="lg:col-span-1 space-y-6">
-            {/* Booking Card */}
-            <div className="bg-white rounded-xl shadow-xl p-6 border border-gray-200 sticky top-20">
-              <div className="mb-4">
-                <h3 className="text-xl font-bold text-gray-800 mb-2">Book Your Ooty Adventure</h3>
-                <div className="flex items-center">
-                  <span className="text-3xl font-bold text-gray-900 mr-2">₹5,500</span>
-                  <span className="text-lg line-through text-gray-500">₹6,000</span>
-                  <span className="ml-2 bg-indigo-100 text-indigo-800 text-xs font-semibold px-2 py-0.5 rounded-full">8% OFF</span>
-                </div>
-                <p className="text-sm text-gray-500 mt-1">per person</p>
-              </div>
-              
-              <div className="space-y-4">
-                <div className="flex items-center text-sm">
-                  <Clock className="h-4 w-4 text-gray-500 mr-2" />
-                  <span>2 Days / 1 Night</span>
-                </div>
-                <div className="flex items-center text-sm">
-                  <CalendarClock className="h-4 w-4 text-gray-500 mr-2" />
-                  <span>Friday night to Sunday night</span>
-                </div>
-                <div className="flex items-center text-sm">
-                  <Users className="h-4 w-4 text-gray-500 mr-2" />
-                  <span>20-25 people per group</span>
-                </div>
-              </div>
-              
-              <div className="my-5 border-t border-b border-gray-200 py-4">
-                <h4 className="font-semibold text-gray-800 mb-2">Inclusions</h4>
-                <ul className="space-y-2">
-                  <li className="flex items-start text-sm">
-                    <CheckCircle2 className="h-4 w-4 text-indigo-500 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Non-A/C round-trip transport from Bangalore</span>
-                  </li>
-                  <li className="flex items-start text-sm">
-                    <CheckCircle2 className="h-4 w-4 text-indigo-500 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>2 Breakfasts and 1 Veg dinner</span>
-                  </li>
-                  <li className="flex items-start text-sm">
-                    <CheckCircle2 className="h-4 w-4 text-indigo-500 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>All required permits and entry fees</span>
-                  </li>
-                  <li className="flex items-start text-sm">
-                    <CheckCircle2 className="h-4 w-4 text-indigo-500 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Dormitory accommodation (separate for men and women)</span>
-                  </li>
-                  <li className="flex items-start text-sm">
-                    <CheckCircle2 className="h-4 w-4 text-indigo-500 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Abhi Trip trek coordinator</span>
-                  </li>
-                  <li className="flex items-start text-sm">
-                    <CheckCircle2 className="h-4 w-4 text-indigo-500 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Basic first aid kit</span>
-                  </li>
-                </ul>
-              </div>
-              
-              <div className="mb-5">
-                <h4 className="font-semibold text-gray-800 mb-2">Exclusions</h4>
-                <ul className="space-y-2">
-                  <li className="flex items-start text-sm">
-                    <XCircle className="h-4 w-4 text-red-500 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Optional Activities</span>
-                  </li>
-                  <li className="flex items-start text-sm">
-                    <XCircle className="h-4 w-4 text-red-500 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Personal Expenses: Snacks, Bottled Water, Additional Meals</span>
-                  </li>
-                  <li className="flex items-start text-sm">
-                    <XCircle className="h-4 w-4 text-red-500 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Insurance of any kind</span>
-                  </li>
-                  <li className="flex items-start text-sm">
-                    <XCircle className="h-4 w-4 text-red-500 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Anything not listed in the "Inclusions"</span>
-                  </li>
-                </ul>
-              </div>
-              
-              <div className="space-y-3">
-                <Link href="/contact" className="w-full flex items-center justify-center bg-gradient-to-r from-indigo-600 to-purple-700 hover:from-indigo-700 hover:to-purple-800 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 transform hover:scale-[1.02] shadow-md hover:shadow-lg">
-                  Book Now
-                </Link>
-                
-                <button className="w-full flex items-center justify-center border border-indigo-600 text-indigo-700 hover:bg-indigo-50 font-semibold py-3 px-4 rounded-lg transition-colors duration-300">
-                  <Heart className="h-5 w-5 mr-2" /> Add to Wishlist
-                </button>
-              </div>
-            </div>
-            
-            {/* Testimonial */}
-            <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl p-5 border border-indigo-100">
-              <div className="flex items-center mb-4">
-                <div className="h-12 w-12 rounded-full bg-white p-0.5 shadow-md mr-3">
-                  <div className="h-full w-full rounded-full bg-gradient-to-br from-indigo-400 to-purple-600 flex items-center justify-center text-white font-bold text-lg">
-                    A
+          {/* Booking Sidebar */}
+          <div className="lg:col-span-1">
+            <div className="sticky top-24 space-y-8">
+              {/* Pricing Card */}
+              <Card className="shadow-xl border-0 bg-gradient-to-br from-indigo-100 via-purple-50 to-white hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 group">
+                <CardHeader className="text-center">
+                  <div className="flex items-center justify-center gap-2 mb-2">
+                    <span className="text-3xl font-bold text-indigo-700 drop-shadow">₹5,500</span>
+                    <span className="text-lg text-gray-400 line-through">₹6,000</span>
+                  </div>
+                  <p className="text-sm text-gray-600">per person</p>
+                  <div className="mt-2">
+                    <span className="bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full px-3 py-1 text-xs font-bold text-white shadow-md">
+                      8% OFF
+                    </span>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <div className="mb-4 bg-gradient-to-r from-yellow-50 to-purple-50 p-4 rounded-lg border border-yellow-200 shadow-sm group-hover:shadow-md transition-all duration-300">
+                    <h4 className="font-medium text-yellow-800 flex items-center gap-2">
+                      <CheckCircle2 className="h-4 w-4" /> Quick WhatsApp Booking
+                    </h4>
+                    <p className="text-sm text-yellow-700 mt-1">
+                      Book instantly through WhatsApp for faster confirmations and immediate responses!
+                    </p>
+                  </div>
+                  <div className="rounded-xl bg-white/80 shadow-inner p-2 hover:shadow-lg transition-all duration-300">
+                    <BookingForm tripTitle="Ooty Adventure" tripPrice="₹5,500" />
+                  </div>
+                  {/* Contact Options */}
+                  <div className="mt-6 pt-6 border-t border-dashed border-indigo-200">
+                    <h4 className="font-medium text-center text-indigo-700 mb-2">Need Help?</h4>
+                    <div className="flex gap-2 min-w-0 flex-wrap sm:flex-nowrap items-stretch">
+                      <a
+                        href="tel:+919740174089"
+                        className="flex-1 w-0 flex items-center justify-center gap-2 py-2 px-4 bg-gradient-to-r from-indigo-500 to-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors shadow-md hover:scale-105"
+                      >
+                        <Phone className="w-4 h-4" />
+                        Call
+                      </a>
+                      <a
+                        href="https://wa.me/919740174089"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-1 w-0 flex items-center justify-center gap-2 py-2 px-4 bg-gradient-to-r from-green-500 to-green-700 text-white rounded-lg hover:from-green-600 hover:to-green-800 transition-colors shadow-md hover:scale-105"
+                      >
+                        <MessageCircle className="w-4 h-4" />
+                        WhatsApp
+                      </a>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Trip Details Card */}
+              <Card className="shadow-lg border-0 bg-gradient-to-br from-purple-50 to-indigo-50 hover:shadow-xl hover:scale-[1.01] transition-all duration-300 group">
+                <CardHeader>
+                  <CardTitle className="text-lg text-indigo-800">Trip Details</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-3">
+                  <div className="flex items-center text-sm group-hover:text-indigo-700 transition-colors duration-300">
+                    <Clock className="h-4 w-4 text-indigo-400 mr-2 group-hover:text-indigo-600 transition-colors duration-300" />
+                    <span>2 Days / 1 Night</span>
+                  </div>
+                  <div className="flex items-center text-sm group-hover:text-indigo-700 transition-colors duration-300">
+                    <Users className="h-4 w-4 text-indigo-400 mr-2 group-hover:text-indigo-600 transition-colors duration-300" />
+                    <span>20-25 people per group</span>
+                  </div>
+                  <div className="flex items-center text-sm group-hover:text-indigo-700 transition-colors duration-300">
+                    <MapPin className="h-4 w-4 text-indigo-400 mr-2 group-hover:text-indigo-600 transition-colors duration-300" />
+                    <span>270km from Bangalore</span>
+                  </div>
+                  <div className="flex items-center text-sm group-hover:text-indigo-700 transition-colors duration-300">
+                    <Star className="h-4 w-4 text-yellow-500 mr-2 group-hover:scale-110 transition-transform duration-300" />
+                    <span>4.5/5 (112 reviews)</span>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Testimonial */}
+              <div className="bg-gradient-to-br from-indigo-50 via-purple-50 to-white rounded-xl p-6 border border-indigo-100 shadow-lg hover:shadow-2xl hover:scale-[1.03] transition-all duration-300 hover:border-purple-300 group relative overflow-hidden">
+                <div className="absolute -top-8 -right-8 w-32 h-32 bg-gradient-to-br from-indigo-200/30 to-purple-200/20 rounded-full blur-2xl pointer-events-none"></div>
+                <div className="absolute -bottom-8 -left-8 w-24 h-24 bg-gradient-to-tr from-purple-200/30 to-indigo-200/20 rounded-full blur-xl pointer-events-none"></div>
+                <div className="flex items-center mb-4">
+                  <div className="h-12 w-12 rounded-full bg-white p-0.5 shadow-md mr-3 group-hover:scale-110 transition-transform duration-300 group-hover:shadow-lg">
+                    <div className="h-full w-full rounded-full bg-gradient-to-br from-indigo-400 to-purple-600 flex items-center justify-center text-white font-bold text-lg">
+                      A
+                    </div>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-gray-800 group-hover:text-indigo-800 transition-colors duration-300">Arun P.</h4>
+                    <div className="flex items-center">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="h-4 w-4 text-yellow-400 fill-yellow-400 group-hover:scale-110 transition-transform duration-300" />
+                      ))}
+                    </div>
                   </div>
                 </div>
-                <div>
-                  <h4 className="font-bold text-gray-800">Arun P.</h4>
-                  <div className="flex items-center">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-4 w-4 text-yellow-400 fill-yellow-400" />
-                    ))}
-                  </div>
-                </div>
+                <p className="text-gray-600 italic group-hover:text-gray-700 transition-colors duration-300">"The Ooty Adventure was nothing short of magical! From the misty morning views at Needle Rock to the serene Pine Tree Forest, every moment was picture-perfect. The tea factory tour was both educational and delicious. Our guide was knowledgeable and friendly, making the entire trip even more enjoyable. I'd highly recommend this trip to anyone looking for a peaceful yet adventurous getaway from Bangalore!"</p>
               </div>
-              <p className="text-gray-600 italic">"The Ooty Adventure was nothing short of magical! From the misty morning views at Needle Rock to the serene Pine Tree Forest, every moment was picture-perfect. The tea factory tour was both educational and delicious. Our guide was knowledgeable and friendly, making the entire trip even more enjoyable. I'd highly recommend this trip to anyone looking for a peaceful yet adventurous getaway from Bangalore!"</p>
             </div>
+          </div>
+        </div>
+
+        {/* Inclusions & Exclusions Section */}
+        <div className="my-10 flex flex-col md:flex-row md:space-x-8 space-y-8 md:space-y-0">
+          <div className="flex-1 bg-gradient-to-br from-green-50 to-emerald-100 rounded-xl p-6 border border-green-200 shadow-lg">
+            <h4 className="flex items-center text-lg font-bold text-green-800 mb-4">
+              <span className="bg-green-500 text-white rounded-full p-2 mr-2"><CheckCircle2 className="h-5 w-5" /></span>
+              Inclusions
+            </h4>
+            <ul className="space-y-3">
+              <li className="flex items-center bg-white rounded-lg p-3 border border-green-100 shadow-sm"><CheckCircle2 className="h-5 w-5 text-green-500 mr-2" />Non-A/C round-trip transport from Bangalore</li>
+              <li className="flex items-center bg-white rounded-lg p-3 border border-green-100 shadow-sm"><CheckCircle2 className="h-5 w-5 text-green-500 mr-2" />2 Breakfasts and 1 dinner (Veg and Non Veg)</li>
+              <li className="flex items-center bg-white rounded-lg p-3 border border-green-100 shadow-sm"><CheckCircle2 className="h-5 w-5 text-green-500 mr-2" />Ooty sightseeing tour</li>
+              <li className="flex items-center bg-white rounded-lg p-3 border border-green-100 shadow-sm"><CheckCircle2 className="h-5 w-5 text-green-500 mr-2" />Visit to Doddabetta Peak, Botanical Gardens, Tea Factory</li>
+              <li className="flex items-center bg-white rounded-lg p-3 border border-green-100 shadow-sm"><CheckCircle2 className="h-5 w-5 text-green-500 mr-2" />Dormitory accommodation (separate for men and women)</li>
+              <li className="flex items-center bg-white rounded-lg p-3 border border-green-100 shadow-sm"><CheckCircle2 className="h-5 w-5 text-green-500 mr-2" />Abhi Trip trek coordinator</li>
+              <li className="flex items-center bg-white rounded-lg p-3 border border-green-100 shadow-sm"><CheckCircle2 className="h-5 w-5 text-green-500 mr-2" />Basic first aid kit</li>
+            </ul>
+          </div>
+          <div className="flex-1 bg-gradient-to-br from-rose-50 to-red-100 rounded-xl p-6 border border-red-200 shadow-lg">
+            <h4 className="flex items-center text-lg font-bold text-red-800 mb-4">
+              <span className="bg-red-500 text-white rounded-full p-2 mr-2"><XCircle className="h-5 w-5" /></span>
+              Exclusions
+            </h4>
+            <ul className="space-y-3">
+              <li className="flex items-center bg-white rounded-lg p-3 border border-red-100 shadow-sm"><XCircle className="h-5 w-5 text-red-500 mr-2" />Any kind of insurance</li>
+              <li className="flex items-center bg-white rounded-lg p-3 border border-red-100 shadow-sm"><XCircle className="h-5 w-5 text-red-500 mr-2" />Personal Expenses (snacks, mineral water, etc)</li>
+              <li className="flex items-center bg-white rounded-lg p-3 border border-red-100 shadow-sm"><XCircle className="h-5 w-5 text-red-500 mr-2" />Anything not included above</li>
+            </ul>
           </div>
         </div>
       </div>

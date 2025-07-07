@@ -5,9 +5,9 @@ import Link from "next/link"
 const twoDayTrips = [
   {
     id: 1,
-    title: "Coorg Coffee Plantation Experience",
+    title: "Coorg Trip – The Scotland of India",
     description:
-      "Immerse yourself in the misty hills of Coorg with coffee plantation tours, waterfalls, and authentic local culture.",
+      "Discover the lush beauty and cultural richness of Coorg – often hailed as the 'Scotland of India.' From majestic viewpoints and roaring waterfalls to spiritual sanctuaries and elephant encounters, this 2-day escape is crafted for nature lovers, photographers, and adventure seekers.",
     image:
       "https://images.unsplash.com/photo-1669744665015-33f3a2f657b3?q=80&w=1342&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     price: "₹3,999",
@@ -18,7 +18,7 @@ const twoDayTrips = [
     rating: 4.8,
     reviews: 124,
     slug: "coorg-trip",
-    highlights: ["Coffee plantation", "Abbey Falls", "Raja's Seat", "Local cuisine"],
+    highlights: ["Mandalpatti View Point", "Abbey Falls", "Raja Seat", "Harangi Elephant Camp", "Namdroling Monastery"],
     location: "250km from Bangalore",
   },
   {
