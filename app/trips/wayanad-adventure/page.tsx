@@ -535,37 +535,113 @@ export default function WayanadAdventurePage() {
                 </div>
               </div>
             </section>
-            
-            {/* Inclusions & Exclusions Section */}
-            <div className="my-10 grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-gradient-to-br from-green-50 to-emerald-100 rounded-xl p-6 border border-green-200 shadow-lg">
-                <h4 className="flex items-center text-lg font-bold text-green-800 mb-4">
-                  <span className="bg-green-500 text-white rounded-full p-2 mr-2"><CheckCircle2 className="h-5 w-5" /></span>
-                  Inclusions
-                </h4>
-                <ul className="space-y-3">
-                  <li className="flex items-center bg-white rounded-lg p-3 border border-green-100 shadow-sm"><CheckCircle2 className="h-5 w-5 text-green-500 mr-2" />Non-A/C round-trip transport from Bangalore</li>
-                  <li className="flex items-center bg-white rounded-lg p-3 border border-green-100 shadow-sm"><CheckCircle2 className="h-5 w-5 text-green-500 mr-2" />2 Breakfasts and 1 dinner (Veg and Non Veg)</li>
-                  <li className="flex items-center bg-white rounded-lg p-3 border border-green-100 shadow-sm"><CheckCircle2 className="h-5 w-5 text-green-500 mr-2" />River Rafting</li>
-                  <li className="flex items-center bg-white rounded-lg p-3 border border-green-100 shadow-sm"><CheckCircle2 className="h-5 w-5 text-green-500 mr-2" />Swimming in Kali river</li>
-                  <li className="flex items-center bg-white rounded-lg p-3 border border-green-100 shadow-sm"><CheckCircle2 className="h-5 w-5 text-green-500 mr-2" />Indoor Games (Carom, Archery, Cycling, Badminton, Table tennis)</li>
-                  <li className="flex items-center bg-white rounded-lg p-3 border border-green-100 shadow-sm"><CheckCircle2 className="h-5 w-5 text-green-500 mr-2" />Dormitory accommodation (separate for men and women)</li>
-                  <li className="flex items-center bg-white rounded-lg p-3 border border-green-100 shadow-sm"><CheckCircle2 className="h-5 w-5 text-green-500 mr-2" />Abhi Trip trek coordinator</li>
-                  <li className="flex items-center bg-white rounded-lg p-3 border border-green-100 shadow-sm"><CheckCircle2 className="h-5 w-5 text-green-500 mr-2" />Basic first aid kit</li>
-                </ul>
+              {/* Inclusions & Exclusions */}
+            <section className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+              <div className="flex items-center mb-4">
+                <div className="w-10 h-10 flex items-center justify-center bg-gradient-to-br from-green-500 to-teal-600 rounded-full mr-3 shadow-md">
+                  <CheckCircle2 className="h-5 w-5 text-white" />
+                </div>
+                <h2 className="text-2xl font-bold bg-gradient-to-r from-green-600 to-teal-700 bg-clip-text text-transparent">Inclusions & Exclusions</h2>
               </div>
-              <div className="bg-gradient-to-br from-rose-50 to-red-100 rounded-xl p-6 border border-red-200 shadow-lg">
-                <h4 className="flex items-center text-lg font-bold text-red-800 mb-4">
-                  <span className="bg-red-500 text-white rounded-full p-2 mr-2"><XCircle className="h-5 w-5" /></span>
-                  Exclusions
-                </h4>
-                <ul className="space-y-3">
-                  <li className="flex items-center bg-white rounded-lg p-3 border border-red-100 shadow-sm"><XCircle className="h-5 w-5 text-red-500 mr-2" />Any kind of insurance</li>
-                  <li className="flex items-center bg-white rounded-lg p-3 border border-red-100 shadow-sm"><XCircle className="h-5 w-5 text-red-500 mr-2" />Personal Expenses (snacks, mineral water, etc)</li>
-                  <li className="flex items-center bg-white rounded-lg p-3 border border-red-100 shadow-sm"><XCircle className="h-5 w-5 text-red-500 mr-2" />Anything not included above</li>
-                </ul>
+              
+              <div className="mb-6 bg-green-50 p-4 rounded-lg border border-green-100 transform hover:scale-[1.01] transition-transform duration-300">
+                <p className="text-green-800 font-medium flex items-center">
+                  <CheckCircle2 className="h-5 w-5 mr-2 text-green-600" />
+                  What's included in your Wayanad Adventure package and what you'll need to arrange separately.
+                </p>
               </div>
-            </div>
+              
+              <div className="grid md:grid-cols-2 gap-6">
+                {/* Inclusions */}
+                <div className="bg-gradient-to-br from-green-50 to-teal-50 rounded-lg p-5 border border-green-100 shadow-sm hover:shadow-md transition-shadow duration-300">
+                  <h3 className="font-semibold text-green-800 mb-4 flex items-center text-lg">
+                    <div className="h-8 w-8 flex items-center justify-center bg-gradient-to-br from-green-400 to-teal-500 rounded-full mr-3 flex-shrink-0 shadow-sm">
+                      <CheckCircle2 className="h-4 w-4 text-white" />
+                    </div>
+                    Inclusions
+                  </h3>
+                  <ul className="space-y-3 pl-11">
+                    <li className="flex items-start text-sm bg-white p-2 rounded-lg shadow-sm border border-green-100 transform hover:translate-y-[-2px] transition-transform duration-300">
+                      <CheckCircle2 className="h-4 w-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <span>Non-A/C Transport from Bangalore (Round Trip)</span>
+                    </li>
+                    <li className="flex items-start text-sm bg-white p-2 rounded-lg shadow-sm border border-green-100 transform hover:translate-y-[-2px] transition-transform duration-300">
+                      <CheckCircle2 className="h-4 w-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <span>2 Breakfasts and 1 Dinner (Veg and Non-Veg)</span>
+                    </li>
+                    <li className="flex items-start text-sm bg-white p-2 rounded-lg shadow-sm border border-green-100 transform hover:translate-y-[-2px] transition-transform duration-300">
+                      <CheckCircle2 className="h-4 w-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <span>Visit to Soochipara Waterfalls</span>
+                    </li>
+                    <li className="flex items-start text-sm bg-white p-2 rounded-lg shadow-sm border border-green-100 transform hover:translate-y-[-2px] transition-transform duration-300">
+                      <CheckCircle2 className="h-4 w-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <span>Visit to Edakkal Caves</span>
+                    </li>
+                    <li className="flex items-start text-sm bg-white p-2 rounded-lg shadow-sm border border-green-100 transform hover:translate-y-[-2px] transition-transform duration-300">
+                      <CheckCircle2 className="h-4 w-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <span>Visit to Banasura Dam</span>
+                    </li>
+                    <li className="flex items-start text-sm bg-white p-2 rounded-lg shadow-sm border border-green-100 transform hover:translate-y-[-2px] transition-transform duration-300">
+                      <CheckCircle2 className="h-4 w-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <span>Dormitory Accommodation (Separate for Men and Women)</span>
+                    </li>
+                    <li className="flex items-start text-sm bg-white p-2 rounded-lg shadow-sm border border-green-100 transform hover:translate-y-[-2px] transition-transform duration-300">
+                      <CheckCircle2 className="h-4 w-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <span>Abhi Trip Trek Coordinator</span>
+                    </li>
+                    <li className="flex items-start text-sm bg-white p-2 rounded-lg shadow-sm border border-green-100 transform hover:translate-y-[-2px] transition-transform duration-300">
+                      <CheckCircle2 className="h-4 w-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <span>Basic First Aid Kit</span>
+                    </li>
+                  </ul>
+                </div>
+                
+                {/* Exclusions */}
+                <div className="bg-gradient-to-br from-rose-50 via-red-50 to-pink-50 rounded-lg p-6 border border-red-200 shadow-md hover:shadow-lg transition-all duration-300 relative overflow-hidden">
+                  {/* Background pattern */}
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-red-200/20 to-pink-200/30 rounded-full blur-2xl -mr-10 -mt-10 pointer-events-none"></div>
+                  <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-red-200/30 to-pink-200/20 rounded-full blur-xl -ml-6 -mb-6 pointer-events-none"></div>
+                  
+                  <h3 className="font-bold text-red-800 mb-5 flex items-center text-lg relative z-10">
+                    <div className="h-8 w-8 flex items-center justify-center bg-gradient-to-br from-red-500 to-pink-600 rounded-full mr-3 flex-shrink-0 shadow-md ring-2 ring-red-200">
+                      <XCircle className="h-4 w-4 text-white" />
+                    </div>
+                    Exclusions
+                  </h3>
+                  
+                  <div className="bg-white/80 backdrop-blur-sm rounded-lg p-4 mb-4 border border-red-100 relative z-10">
+                    <p className="text-gray-700 text-sm italic">The following items are not included in your trip package and may require additional payment or separate arrangements.</p>
+                  </div>
+                  
+                  <ul className="space-y-3 pl-12 relative z-10">
+                    <li className="flex items-start bg-white p-4 rounded-lg shadow-sm border-l-4 border border-red-200 border-l-red-400 transform hover:translate-y-[-2px] transition-all duration-300 hover:shadow-md group">
+                      <XCircle className="h-5 w-5 text-red-500 mr-3 mt-0.5 flex-shrink-0 group-hover:text-red-600 group-hover:scale-110 transition-all duration-300" />
+                      <span className="text-gray-700 font-medium">900 Kandi Glass Bridge jeep ride (self-sponsored)</span>
+                    </li>
+                    <li className="flex items-start bg-white p-4 rounded-lg shadow-sm border-l-4 border border-red-200 border-l-red-400 transform hover:translate-y-[-2px] transition-all duration-300 hover:shadow-md group">
+                      <XCircle className="h-5 w-5 text-red-500 mr-3 mt-0.5 flex-shrink-0 group-hover:text-red-600 group-hover:scale-110 transition-all duration-300" />
+                      <span className="text-gray-700 font-medium">Adventure activities (ziplining, sky cycling, giant swing)</span>
+                    </li>
+                    <li className="flex items-start bg-white p-4 rounded-lg shadow-sm border-l-4 border border-red-200 border-l-red-400 transform hover:translate-y-[-2px] transition-all duration-300 hover:shadow-md group">
+                      <XCircle className="h-5 w-5 text-red-500 mr-3 mt-0.5 flex-shrink-0 group-hover:text-red-600 group-hover:scale-110 transition-all duration-300" />
+                      <span className="text-gray-700 font-medium">Lunches during the trip</span>
+                    </li>
+                    <li className="flex items-start bg-white p-4 rounded-lg shadow-sm border-l-4 border border-red-200 border-l-red-400 transform hover:translate-y-[-2px] transition-all duration-300 hover:shadow-md group">
+                      <XCircle className="h-5 w-5 text-red-500 mr-3 mt-0.5 flex-shrink-0 group-hover:text-red-600 group-hover:scale-110 transition-all duration-300" />
+                      <span className="text-gray-700 font-medium">Personal Expenses: Bottled Water, Snacks, Souvenirs</span>
+                    </li>
+                    <li className="flex items-start bg-white p-4 rounded-lg shadow-sm border-l-4 border border-red-200 border-l-red-400 transform hover:translate-y-[-2px] transition-all duration-300 hover:shadow-md group">
+                      <XCircle className="h-5 w-5 text-red-500 mr-3 mt-0.5 flex-shrink-0 group-hover:text-red-600 group-hover:scale-110 transition-all duration-300" />
+                      <span className="text-gray-700 font-medium">Insurance of any kind</span>
+                    </li>
+                    <li className="flex items-start bg-white p-4 rounded-lg shadow-sm border-l-4 border border-red-200 border-l-red-400 transform hover:translate-y-[-2px] transition-all duration-300 hover:shadow-md group">
+                      <XCircle className="h-5 w-5 text-red-500 mr-3 mt-0.5 flex-shrink-0 group-hover:text-red-600 group-hover:scale-110 transition-all duration-300" />
+                      <span className="text-gray-700 font-medium">Anything not listed in the "Inclusions"</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </section>
           </div>
           
           {/* Sidebar for Booking Form and Testimonial */}

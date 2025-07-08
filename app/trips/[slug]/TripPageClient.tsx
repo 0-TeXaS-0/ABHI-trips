@@ -148,7 +148,29 @@ export default function TripPageClient({ trip }: TripPageClientProps) {
                   ))}
                 </div>
               </CardContent>
-            </Card>
+            </Card>            {/* Pickup Points */}
+            {trip.pickupPoints && trip.pickupPoints.length > 0 && (
+              <Card>
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <MapPin className="w-5 h-5 text-blue-600" />
+                    Pickup Points
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-3">
+                    {trip.pickupPoints.map((pickup, index) => (
+                      <div key={index} className="bg-gradient-to-r from-gray-50 to-blue-50 rounded-lg p-3 shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <div className="flex items-center gap-3">
+                          <MapPin className="w-4 h-4 text-blue-600 flex-shrink-0" />
+                          <span className="text-gray-700">{pickup}</span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            )}
 
             {/* Detailed Itinerary */}
             <Card>

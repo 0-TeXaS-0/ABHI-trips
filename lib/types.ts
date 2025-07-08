@@ -16,6 +16,7 @@ export interface Trip {
   category: string;
   fullDescription: string;
   itinerary: Array<{ time: string; activity: string }>;
+  pickupPoints?: string[];
   inclusions: string[];
   exclusions: string[];
   whatToBring: string[];

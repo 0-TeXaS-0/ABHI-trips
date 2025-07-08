@@ -766,74 +766,109 @@ export default function NetravatiTrekPage() {
                   </div>
                 </CardContent>
               </Card>
+              {/* Inclusions & Exclusions */}
+            <section className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+              <div className="flex items-center mb-4">
+                <div className="w-10 h-10 flex items-center justify-center bg-gradient-to-br from-emerald-500 to-teal-600 rounded-full mr-3 shadow-md">
+                  <CheckCircle2 className="h-5 w-5 text-white" />
+                </div>
+                <h2 className="text-2xl font-bold bg-gradient-to-r from-emerald-600 to-teal-700 bg-clip-text text-transparent">Inclusions & Exclusions</h2>
+              </div>
               
-              {/* Inclusions & Exclusions Card */}
-              <Card className="shadow-lg">
-                <CardHeader>
-                  <CardTitle className="text-lg">Inclusions & Exclusions</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div>
-                    <h4 className="font-medium text-green-700 mb-2 flex items-center gap-1">
-                      <Check className="h-4 w-4" /> Inclusions
-                    </h4>
-                    <ul className="space-y-2">
-                      <li className="flex items-start bg-white p-3 rounded-lg shadow-sm border-l-4 border border-green-200 border-l-green-400 transform hover:translate-y-[-2px] transition-all duration-300 hover:shadow-md group">
-                        <CheckCircle className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0 group-hover:text-green-600 group-hover:scale-110 transition-all duration-300" />
-                        <span className="text-gray-700 font-medium">Transportation: Non-AC vehicle from Bangalore to Netravati and back</span>
-                      </li>
-                      <li className="flex items-start bg-white p-3 rounded-lg shadow-sm border-l-4 border border-green-200 border-l-green-400 transform hover:translate-y-[-2px] transition-all duration-300 hover:shadow-md group">
-                        <CheckCircle className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0 group-hover:text-green-600 group-hover:scale-110 transition-all duration-300" />
-                        <span className="text-gray-700 font-medium">Accommodation: Dormitory style homestay (gender-segregated)</span>
-                      </li>
-                      <li className="flex items-start bg-white p-3 rounded-lg shadow-sm border-l-4 border border-green-200 border-l-green-400 transform hover:translate-y-[-2px] transition-all duration-300 hover:shadow-md group">
-                        <CheckCircle className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0 group-hover:text-green-600 group-hover:scale-110 transition-all duration-300" />
-                        <span className="text-gray-700 font-medium">Meals: 2 breakfasts, 2 lunches, 1 dinner</span>
-                      </li>
-                      <li className="flex items-start bg-white p-3 rounded-lg shadow-sm border-l-4 border border-green-200 border-l-green-400 transform hover:translate-y-[-2px] transition-all duration-300 hover:shadow-md group">
-                        <CheckCircle className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0 group-hover:text-green-600 group-hover:scale-110 transition-all duration-300" />
-                        <span className="text-gray-700 font-medium">Trek guide and forest entry permits</span>
-                      </li>
-                      <li className="flex items-start bg-white p-3 rounded-lg shadow-sm border-l-4 border border-green-200 border-l-green-400 transform hover:translate-y-[-2px] transition-all duration-300 hover:shadow-md group">
-                        <CheckCircle className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0 group-hover:text-green-600 group-hover:scale-110 transition-all duration-300" />
-                        <span className="text-gray-700 font-medium">First aid support and experienced trip leader</span>
-                      </li>
-                      <li className="flex items-start bg-white p-3 rounded-lg shadow-sm border-l-4 border border-green-200 border-l-green-400 transform hover:translate-y-[-2px] transition-all duration-300 hover:shadow-md group">
-                        <CheckCircle className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0 group-hover:text-green-600 group-hover:scale-110 transition-all duration-300" />
-                        <span className="text-gray-700 font-medium">Evening campfire and activities</span>
-                      </li>
-                    </ul>
+              <div className="mb-6 bg-emerald-50 p-4 rounded-lg border border-emerald-100 transform hover:scale-[1.01] transition-transform duration-300">
+                <p className="text-emerald-800 font-medium flex items-center">
+                  <CheckCircle2 className="h-5 w-5 mr-2 text-emerald-600" />
+                  What's included in your package and what you'll need to arrange separately.
+                </p>
+              </div>
+                <div className="grid md:grid-cols-2 gap-6">
+                {/* Inclusions */}
+                <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-lg p-6 border border-green-200 shadow-md hover:shadow-lg transition-all duration-300 relative overflow-hidden">
+                  {/* Background pattern */}
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-green-200/20 to-emerald-200/30 rounded-full blur-2xl -mr-10 -mt-10 pointer-events-none"></div>
+                  <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-green-200/30 to-emerald-200/20 rounded-full blur-xl -ml-6 -mb-6 pointer-events-none"></div>
+                  
+                  <h3 className="font-bold text-green-800 mb-5 flex items-center text-lg relative z-10">
+                    <div className="h-8 w-8 flex items-center justify-center bg-gradient-to-br from-green-500 to-emerald-600 rounded-full mr-3 flex-shrink-0 shadow-md ring-2 ring-green-200">
+                      <CheckCircle2 className="h-4 w-4 text-white" />
+                    </div>
+                    Inclusions
+                  </h3>
+                  
+                  <div className="bg-white/80 backdrop-blur-sm rounded-lg p-4 mb-4 border border-green-100 relative z-10">
+                    <p className="text-gray-700 text-sm italic">The following items are included in your trip package:</p>
                   </div>
                   
-                  <div>
-                    <h4 className="font-medium text-red-700 mb-2 flex items-center gap-1">
-                      <X className="h-4 w-4" /> Exclusions
-                    </h4>
-                    <ul className="space-y-2">
-                      <li className="flex items-start bg-white p-3 rounded-lg shadow-sm border-l-4 border border-red-200 border-l-red-400 transform hover:translate-y-[-2px] transition-all duration-300 hover:shadow-md group">
-                        <XCircle className="h-5 w-5 text-red-500 mr-3 mt-0.5 flex-shrink-0 group-hover:text-red-600 group-hover:scale-110 transition-all duration-300" />
-                        <span className="text-gray-700 font-medium">Day 2 dinner (will be arranged en route, self-sponsored)</span>
-                      </li>
-                      <li className="flex items-start bg-white p-3 rounded-lg shadow-sm border-l-4 border border-red-200 border-l-red-400 transform hover:translate-y-[-2px] transition-all duration-300 hover:shadow-md group">
-                        <XCircle className="h-5 w-5 text-red-500 mr-3 mt-0.5 flex-shrink-0 group-hover:text-red-600 group-hover:scale-110 transition-all duration-300" />
-                        <span className="text-gray-700 font-medium">Personal expenses and additional beverages</span>
-                      </li>
-                      <li className="flex items-start bg-white p-3 rounded-lg shadow-sm border-l-4 border border-red-200 border-l-red-400 transform hover:translate-y-[-2px] transition-all duration-300 hover:shadow-md group">
-                        <XCircle className="h-5 w-5 text-red-500 mr-3 mt-0.5 flex-shrink-0 group-hover:text-red-600 group-hover:scale-110 transition-all duration-300" />
-                        <span className="text-gray-700 font-medium">Any additional activities not mentioned in inclusions</span>
-                      </li>
-                      <li className="flex items-start bg-white p-3 rounded-lg shadow-sm border-l-4 border border-red-200 border-l-red-400 transform hover:translate-y-[-2px] transition-all duration-300 hover:shadow-md group">
-                        <XCircle className="h-5 w-5 text-red-500 mr-3 mt-0.5 flex-shrink-0 group-hover:text-red-600 group-hover:scale-110 transition-all duration-300" />
-                        <span className="text-gray-700 font-medium">Personal insurance, medical expenses</span>
-                      </li>
-                      <li className="flex items-start bg-white p-3 rounded-lg shadow-sm border-l-4 border border-red-200 border-l-red-400 transform hover:translate-y-[-2px] transition-all duration-300 hover:shadow-md group">
-                        <XCircle className="h-5 w-5 text-red-500 mr-3 mt-0.5 flex-shrink-0 group-hover:text-red-600 group-hover:scale-110 transition-all duration-300" />
-                        <span className="text-gray-700 font-medium">Tips to staff and guides (optional)</span>
-                      </li>
-                    </ul>
+                  <ul className="space-y-3 relative z-10">
+                    <li className="flex items-start text-sm bg-white p-2 rounded-lg shadow-sm border border-green-100 transform hover:translate-y-[-2px] transition-transform duration-300">
+                      <CheckCircle2 className="h-4 w-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <span>Transportation: Non-AC vehicle from Bangalore to Netravati and back</span>
+                    </li>
+                    <li className="flex items-start text-sm bg-white p-2 rounded-lg shadow-sm border border-green-100 transform hover:translate-y-[-2px] transition-transform duration-300">
+                      <CheckCircle2 className="h-4 w-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <span>Accommodation: Dormitory style homestay (gender-segregated)</span>
+                    </li>
+                    <li className="flex items-start text-sm bg-white p-2 rounded-lg shadow-sm border border-green-100 transform hover:translate-y-[-2px] transition-transform duration-300">
+                      <CheckCircle2 className="h-4 w-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <span>Meals: 2 breakfasts, 2 lunches, 1 dinner</span>
+                    </li>
+                    <li className="flex items-start text-sm bg-white p-2 rounded-lg shadow-sm border border-green-100 transform hover:translate-y-[-2px] transition-transform duration-300">
+                      <CheckCircle2 className="h-4 w-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <span>Trek guide and forest entry permits</span>
+                    </li>
+                    <li className="flex items-start text-sm bg-white p-2 rounded-lg shadow-sm border border-green-100 transform hover:translate-y-[-2px] transition-transform duration-300">
+                      <CheckCircle2 className="h-4 w-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <span>First aid support and experienced trip leader</span>
+                    </li>
+                    <li className="flex items-start text-sm bg-white p-2 rounded-lg shadow-sm border border-green-100 transform hover:translate-y-[-2px] transition-transform duration-300">
+                      <CheckCircle2 className="h-4 w-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <span>Evening campfire and activities</span>
+                    </li>
+                  </ul>
+                </div>
+                
+                {/* Exclusions */}
+                <div className="bg-gradient-to-br from-rose-50 via-red-50 to-pink-50 rounded-lg p-6 border border-red-200 shadow-md hover:shadow-lg transition-all duration-300 relative overflow-hidden">
+                  {/* Background pattern */}
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-red-200/20 to-pink-200/30 rounded-full blur-2xl -mr-10 -mt-10 pointer-events-none"></div>
+                  <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-red-200/30 to-pink-200/20 rounded-full blur-xl -ml-6 -mb-6 pointer-events-none"></div>
+                  
+                  <h3 className="font-bold text-red-800 mb-5 flex items-center text-lg relative z-10">
+                    <div className="h-8 w-8 flex items-center justify-center bg-gradient-to-br from-red-500 to-pink-600 rounded-full mr-3 flex-shrink-0 shadow-md ring-2 ring-red-200">
+                      <XCircle className="h-4 w-4 text-white" />
+                    </div>
+                    Exclusions
+                  </h3>
+                  
+                  <div className="bg-white/80 backdrop-blur-sm rounded-lg p-4 mb-4 border border-red-100 relative z-10">
+                    <p className="text-gray-700 text-sm italic">The following items are not included in your trip package and may require additional payment or separate arrangements.</p>
                   </div>
-                </CardContent>
-              </Card>
+                  
+                  <ul className="space-y-3 pl-12 relative z-10">
+                    <li className="flex items-start bg-white p-4 rounded-lg shadow-sm border-l-4 border border-red-200 border-l-red-400 transform hover:translate-y-[-2px] transition-all duration-300 hover:shadow-md group">
+                      <XCircle className="h-5 w-5 text-red-500 mr-3 mt-0.5 flex-shrink-0 group-hover:text-red-600 group-hover:scale-110 transition-all duration-300" />
+                      <span className="text-gray-700 font-medium">Day 2 dinner (will be arranged en route, self-sponsored)</span>
+                    </li>
+                    <li className="flex items-start bg-white p-4 rounded-lg shadow-sm border-l-4 border border-red-200 border-l-red-400 transform hover:translate-y-[-2px] transition-all duration-300 hover:shadow-md group">
+                      <XCircle className="h-5 w-5 text-red-500 mr-3 mt-0.5 flex-shrink-0 group-hover:text-red-600 group-hover:scale-110 transition-all duration-300" />
+                      <span className="text-gray-700 font-medium">Personal expenses and additional beverages</span>
+                    </li>
+                    <li className="flex items-start bg-white p-4 rounded-lg shadow-sm border-l-4 border border-red-200 border-l-red-400 transform hover:translate-y-[-2px] transition-all duration-300 hover:shadow-md group">
+                      <XCircle className="h-5 w-5 text-red-500 mr-3 mt-0.5 flex-shrink-0 group-hover:text-red-600 group-hover:scale-110 transition-all duration-300" />
+                      <span className="text-gray-700 font-medium">Any additional activities not mentioned in inclusions</span>
+                    </li>
+                    <li className="flex items-start bg-white p-4 rounded-lg shadow-sm border-l-4 border border-red-200 border-l-red-400 transform hover:translate-y-[-2px] transition-all duration-300 hover:shadow-md group">
+                      <XCircle className="h-5 w-5 text-red-500 mr-3 mt-0.5 flex-shrink-0 group-hover:text-red-600 group-hover:scale-110 transition-all duration-300" />
+                      <span className="text-gray-700 font-medium">Personal insurance, medical expenses</span>
+                    </li>
+                    <li className="flex items-start bg-white p-4 rounded-lg shadow-sm border-l-4 border border-red-200 border-l-red-400 transform hover:translate-y-[-2px] transition-all duration-300 hover:shadow-md group">
+                      <XCircle className="h-5 w-5 text-red-500 mr-3 mt-0.5 flex-shrink-0 group-hover:text-red-600 group-hover:scale-110 transition-all duration-300" />
+                      <span className="text-gray-700 font-medium">Tips to staff and guides (optional)</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </section>
               
               {/* Testimonial */}
               <div className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-xl p-5 border border-emerald-100 hover:shadow-lg hover:scale-[1.02] transition-all duration-300 hover:border-emerald-300 group">
@@ -852,7 +887,7 @@ export default function NetravatiTrekPage() {
                     </div>
                   </div>
                 </div>
-                <p className="text-gray-600 italic group-hover:text-gray-700 transition-colors duration-300">"The Netravati Trek was an incredible journey through pristine Western Ghats. The views from the peak were absolutely breathtaking! Our guide was knowledgeable about local flora and fauna, making the trek both challenging and educational. The homestay, campfire, and the tea estate visit added beautiful cultural dimensions to the adventure."</p>
+                <p className="text-gray-600 italic">"The Netravati Trek was challenging but absolutely worth it! Pristine forests, stunning waterfalls, and the thrill of adventure. The guides were knowledgeable and supportive throughout. One of the best trekking experiences I've had in Karnataka!"</p>
               </div>
             </div>
           </div>
