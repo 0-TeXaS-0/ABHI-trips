@@ -1,14 +1,17 @@
+"use client"
+
 import React from 'react';
 import { ArrowLeft, CalendarClock, Clock, MapPin, CheckCircle2, XCircle, PackageOpen, Tent, Utensils, Car, Heart, Star, Users, Camera, Coffee, Mountain, Sunrise, Phone, MessageCircle } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { AnnouncementBar } from '@/components/announcement-bar';
 import { Card, CardHeader, CardContent, CardTitle } from "@/components/ui/card";
 import ClientBookingForm from './ClientBookingForm';
 
 export default function ChikmagalurTripPage() {
   return (
     <div className="min-h-screen bg-gray-50">
-      
+    
 
       {/* Hero Section */}
       <div className="relative h-[60vh] md:h-[70vh] overflow-hidden">
@@ -23,7 +26,7 @@ export default function ChikmagalurTripPage() {
         {/* Main image with overlay */}
         <div className="absolute inset-0 z-10">
           <Image
-            src="https://images.unsplash.com/photo-1526392060635-9d6019884377?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/chikmagalur-PJjxJ6OpiWIbc3vY2OqhbxaYFsBmy5.jpeg"
             alt="Chikmagalur Backpacking Trip"
             fill
             className="object-cover opacity-75 transform hover:scale-105 transition-transform duration-700"
@@ -48,6 +51,10 @@ export default function ChikmagalurTripPage() {
                   Backpacking Adventure
                 </span>
                 <span className="inline-flex items-center bg-gradient-to-r from-teal-600 to-cyan-800 rounded-full px-4 py-1 text-sm font-medium text-white shadow-lg">
+                  <Coffee className="mr-2 h-4 w-4" />
+                  Coffee Capital
+                </span>
+                <span className="inline-flex items-center bg-gradient-to-r from-blue-600 to-indigo-800 rounded-full px-4 py-1 text-sm font-medium text-white shadow-lg">
                   <Sunrise className="mr-2 h-4 w-4" />
                   Scenic Views
                 </span>
@@ -64,7 +71,7 @@ export default function ChikmagalurTripPage() {
                 </span>
                 <span className="inline-flex items-center bg-black/40 backdrop-blur-sm rounded-full px-4 py-2 text-sm font-medium text-white border border-white/10">
                   <MapPin className="mr-2 h-4 w-4 text-teal-300" />
-                  280km from Bangalore
+                  240km from Bangalore
                 </span>
                 <span className="inline-flex items-center bg-black/40 backdrop-blur-sm rounded-full px-4 py-2 text-sm font-medium text-white border border-white/10">
                   <Users className="mr-2 h-4 w-4 text-yellow-300" />
@@ -76,15 +83,15 @@ export default function ChikmagalurTripPage() {
                       <Star key={i} className="h-4 w-4 text-yellow-400 fill-yellow-400" />
                     ))}
                   </div>
-                  <span>4.9 (87 reviews)</span>
+                  <span>4.7 (108 reviews)</span>
                 </div>
               </div>
               
               <div className="mt-3 flex items-center">
                 <span className="text-4xl font-bold text-white mr-2">₹3,999</span>
-                <span className="text-xl line-through text-white/70">₹4,499</span>
+                <span className="text-xl line-through text-white/70">₹4,299</span>
                 <span className="ml-3 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full px-3 py-1 text-xs font-bold text-white">
-                  12% OFF
+                  8% OFF
                 </span>
               </div>
             </div>
@@ -107,7 +114,7 @@ export default function ChikmagalurTripPage() {
               </div>
               <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-4 rounded-lg mb-4 border border-green-100">
                 <p className="text-gray-700 leading-relaxed text-lg">
-                  Embark on an unforgettable adventure to <span className="font-semibold text-emerald-700">Chikmagalur</span>, the coffee heartland of Karnataka. Nestled in the Western Ghats, this 2-day backpacking trip offers the perfect blend of nature, adventure, and relaxation. Explore misty mountain peaks, cascading waterfalls, ancient temples, and serene lakes while enjoying the cool mountain climate and lush green landscapes that make Chikmagalur a paradise for nature lovers and photographers.
+                  Escape into the heart of Karnataka's Western Ghats with our <span className="font-semibold text-emerald-700">Chikmagalur Backpacking Trip</span>. Misty peaks, hidden waterfalls, ancient temples, and lakeside sunsets all packed into a perfect weekend getaway. Explore the coffee capital of India with its lush plantations, misty mountains, and serene landscapes in this refreshing 2-day retreat.
                 </p>
               </div>
               <div className="flex flex-wrap gap-3 mt-3">
@@ -851,7 +858,7 @@ export default function ChikmagalurTripPage() {
                     </div>
                   </div>
                   <div>
-                    <h4 className="font-bold text-gray-800">Aishwarya R.</h4>
+                    <h4 className="font-bold text-gray-800">Aishwarya P.</h4>
                     <div className="flex items-center">
                       {[...Array(5)].map((_, i) => (
                         <Star key={i} className="h-4 w-4 text-yellow-400 fill-yellow-400" />
