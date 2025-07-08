@@ -367,5 +367,79 @@ export const trips: Trip[] = [
       "Sunscreen and Suncap",
       "Energy bars and snacks"
     ],
+  },
+  {
+    id: 5,
+    title: "Uttari Betta Sunrise Trek",
+    description:
+      'Discover the historic charm of Uttari Betta (Hutridurga), just 70 km from Bangalore. This night trek takes you through lush grasslands, rocky trails and ancient fort gateways, culminating in a breathtaking sunrise view atop a serene hilltop temple.',
+    image:
+      "/images/mountains/uttari.jpg",
+    price: "₹799",
+    originalPrice: "₹999",
+    duration: "1 Day",
+    difficulty: "Easy",
+    groupSize: "15-25",
+    rating: 4.7,
+    reviews: 92,
+    slug: "uttari-betta-sunrise-trek",
+    highlights: [
+      "Ideal for all trekkers Beginners to seasoned hikers",
+      "Ancient hill fort trail with scenic viewpoints",
+      "Budget-friendly adventure"
+    ],
+    location: "70km from Bangalore",
+    category: "One Day Trip",
+    fullDescription:
+      'Discover the historic charm of Uttari Betta (Hutridurga), just 70 km from Bangalore. This night trek takes you through lush grasslands, rocky trails and ancient fort gateways, culminating in a breathtaking sunrise view atop a serene hilltop temple.',
+    itinerary: [
+      { time: "10:45 PM", activity: "Start from Tin Factory (Benniganahalli Metro)" },
+      { time: "11:05 PM", activity: "Pickup at Opp. Kalamandir, Marathahalli" },
+      { time: "11:20 PM", activity: "Pickup at Akme Harmony, Bellandur" },
+      { time: "11:35 PM", activity: "Pickup at Silk Board Bus Stop" },
+      { time: "11:50 PM", activity: "Pickup at Udupi Garden Signal, BTM" },
+      { time: "12:05 AM", activity: "Pickup at Banashankari Bus Stop" },
+      { time: "12:35 AM", activity: "Pickup at Gopalan Arcade Mall, RR Nagar" },
+      { time: "12:55 AM", activity: "Pickup at Guraguntepalya Signal, Yeshwanthpur" },
+      { time: "02:15 AM", activity: "Arrive at the base; quick rest" },
+      { time: "02:45 AM", activity: "Start the trek with our experienced guides" },
+      { time: "04:30 AM", activity: "Reach the summit and enjoy a peaceful sunrise" },
+      { time: "05:45 AM", activity: "Begin descent" },
+      { time: "06:15 AM", activity: "Halt for self-funded breakfast" },
+      { time: "12:30 PM", activity: "Arrive back in Bangalore; same drop-off points" }
+    ],
+    pickupPoints: [
+      "10:45 PM - Tin Factory (Benniganahalli Metro)",
+      "11:05 PM - Opp. Kalamandir, Marathahalli",
+      "11:20 PM - Akme Harmony, Bellandur",
+      "11:35 PM - Silk Board Bus Stop",
+      "11:50 PM - Udupi Garden Signal, BTM",
+      "12:05 AM - Banashankari Bus Stop",
+      "12:35 AM - Gopalan Arcade Mall, RR Nagar",
+      "12:55 AM - Guraguntepalya Signal, Yeshwanthpur"
+    ],
+    inclusions: [
+      "Comfortable round-trip transportation from Bangalore",
+      "Forest or trekking guide",
+      "Trek lead from the Abhitrip Team",
+      "Access to first-aid kit",
+      "Forest permit If any(INCLUDED)"
+    ],
+    exclusions: [
+      "Meals (breakfast/snacks)",
+      "Bottled water or other personal purchases",
+      "Insurance or items not listed under inclusions"
+    ],
+    whatToBring: [
+      "Small backpack to carry your essentials during the trek",
+      "Water bottles 1-2 (1 liter each)",
+      "Raincoat (poncho)/Bag covers in case of rains",
+      "A comfortable pair of shoes with good grip for trekking with extra pair of socks",
+      "Torch/Headlamp to be used at night",
+      "Portable chargers for your electronics",
+      "Eatables during trek Energy Booster, Tissues, Chocolates, Dry fruits, etc",
+      "Personal Medication",
+      "Snacks for yourself"
+    ],
   }
-    ];
+];
