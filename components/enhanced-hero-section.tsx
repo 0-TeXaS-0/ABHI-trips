@@ -135,10 +135,9 @@ export function EnhancedHeroSection() {
     { left: 75, top: 80, width: 8, height: 12 },
     { left: 95, top: 75, width: 10, height: 9 }
   ], [])
-
   // Optimized mouse tracking with throttling
   const handleMouseMove = useCallback((e: MouseEvent) => {
-    if (!prefersReducedMotion) {
+    if (!prefersReducedMotion && typeof window !== 'undefined') {
       setMousePosition({
         x: (e.clientX / window.innerWidth) * 100,
         y: (e.clientY / window.innerHeight) * 100
@@ -147,6 +146,8 @@ export function EnhancedHeroSection() {
   }, [prefersReducedMotion])
 
   useEffect(() => {
+    if (typeof window === 'undefined') return
+    
     let throttleTimer: NodeJS.Timeout
     const throttledMouseMove = (e: MouseEvent) => {
       if (throttleTimer) return

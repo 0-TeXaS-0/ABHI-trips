@@ -14,9 +14,28 @@ export const metadata: Metadata = {
   keywords: "travel, trips, Karnataka, South India, Bangalore, weekend getaway, trekking, adventure",
   generator: 'v0.dev',
   icons: {
-    icon: '/abhi-trip-logo.png',
-    apple: '/abhi-trip-logo.png',
-    shortcut: '/abhi-trip-logo.png'
+    icon: [
+      { url: '/abhi-trip-logo.png', sizes: '32x32', type: 'image/png' },
+      { url: '/abhi-trip-logo.png', sizes: '16x16', type: 'image/png' }
+    ],
+    apple: [
+      { url: '/abhi-trip-logo.png', sizes: '180x180', type: 'image/png' }
+    ],
+    shortcut: '/abhi-trip-logo.png',
+    other: [
+      {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '192x192',
+        url: '/abhi-trip-logo.png',
+      },
+      {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '512x512',
+        url: '/abhi-trip-logo.png',
+      }
+    ]
   }
 }
 
@@ -27,7 +46,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <head>
+        <link rel="icon" type="image/png" sizes="32x32" href="/abhi-trip-logo.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/abhi-trip-logo.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/abhi-trip-logo.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <meta name="theme-color" content="#3B82F6" />
+        <meta name="msapplication-TileColor" content="#3B82F6" />
+        <meta name="msapplication-TileImage" content="/abhi-trip-logo.png" />
+      </head>
+      <body className={inter.className} suppressHydrationWarning={true}>
         <Header />
         <main>{children}</main>
         <Footer />
