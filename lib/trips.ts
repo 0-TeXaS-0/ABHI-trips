@@ -499,9 +499,9 @@ export const trips: Trip[] = [
     description:
       "Experience the perfect blend of pristine beaches, ancient temples, and coastal adventure in this unforgettable 2-day getaway to Gokarna and Murudeshwar.",
     image:
-      "/images/mountains/gokarna.jpg",
-    price: "₹3,699",
-    originalPrice: "₹4,199",
+      "",
+    price: "₹3699",
+    originalPrice: "₹4,799",
     duration: "2 Days / 1 Night",
     difficulty: "Easy",
     groupSize: "15-25",
@@ -581,9 +581,9 @@ export const trips: Trip[] = [
     description:
       "Immerse yourself in the coffee capital of India with lush plantations, misty mountains, and serene landscapes in this refreshing 2-day retreat.",
     image:
-      "/images/mountains/chikmagalur.jpg",
-    price: "₹3,999",
-    originalPrice: "₹4,499",
+      "https://images.unsplash.com/photo-1526392060635-9d6019884377?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+    price: "₹3,799",
+    originalPrice: "₹4,299",
     duration: "2 Days / 1 Night",
     difficulty: "Easy",
     groupSize: "15-20",
