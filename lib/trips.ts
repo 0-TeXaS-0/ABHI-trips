@@ -500,7 +500,7 @@ export const trips: Trip[] = [
       "Experience the perfect blend of pristine beaches, ancient temples, and coastal adventure in this unforgettable 2-day getaway to Gokarna and Murudeshwar.",
     image:
       "",
-    price: "₹3699",
+    price: "₹3,699",
     originalPrice: "₹4,799",
     duration: "2 Days / 1 Night",
     difficulty: "Easy",
@@ -582,7 +582,7 @@ export const trips: Trip[] = [
       "Immerse yourself in the coffee capital of India with lush plantations, misty mountains, and serene landscapes in this refreshing 2-day retreat.",
     image:
       "https://images.unsplash.com/photo-1526392060635-9d6019884377?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
-    price: "₹3,799",
+    price: "₹3,999",
     originalPrice: "₹4,299",
     duration: "2 Days / 1 Night",
     difficulty: "Easy",
@@ -888,8 +888,8 @@ export const trips: Trip[] = [
       "Conquer the 'Horse-faced Peak' of Karnataka with this challenging yet rewarding trek through pristine forests, grasslands, and breathtaking mountain views.",
     image:
       "/images/mountains/kudremukh.jpg",
-    price: "₹3,499",
-    originalPrice: "₹3,999",
+    price: "₹3,899",
+    originalPrice: "₹4,999",
     duration: "2 Days / 1 Night",
     difficulty: "Moderate to Difficult",
     groupSize: "12-15",
@@ -970,8 +970,8 @@ export const trips: Trip[] = [
       "Experience one of Karnataka's most scenic and challenging treks through dense forests, river crossings, and stunning peak views in the Western Ghats.",
     image:
       "/images/mountains/netravati.jpg",
-    price: "₹3,299",
-    originalPrice: "₹3,799",
+    price: "₹3,899",
+    originalPrice: "₹4,799",
     duration: "2 Days / 1 Night",
     difficulty: "Moderate to Difficult",
     groupSize: "10-15",
@@ -1052,8 +1052,8 @@ export const trips: Trip[] = [
       "Discover the hidden gem of Karnataka with this adventurous trek to one of the most spectacular waterfalls in the Western Ghats, surrounded by pristine forests.",
     image:
       "https://images.unsplash.com/photo-1454982523318-4b6396f39d3a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-    price: "₹2,799",
-    originalPrice: "₹3,299",
+    price: "₹3,899",
+    originalPrice: "₹4,299",
     duration: "2 Days / 1 Night",
     difficulty: "Moderate",
     groupSize: "12-18",
